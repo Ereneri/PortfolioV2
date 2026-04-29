@@ -3,75 +3,122 @@
     "category": "Programming Languages",
     "items": [
       "Java",
+      "Python",
       "JavaScript",
       "TypeScript",
-      "Bash",
-      "Python",
-      "C/C++",
       "SQL",
+      "C/C++",
+      "Bash",
       "SwiftUI",
       "ASMx86"
     ]
   },
   {
-    "category": "Development Technologies",
+    "category": "Backend Technologies",
+    "items": [
+      "Node.js",
+      "Express",
+      "Django",
+      "Spring",
+      "Spring Hibernate",
+      "RESTful APIs",
+      "WebSockets",
+      "Apache Tomcat",
+      "Maven",
+      "Gradle"
+    ]
+  },
+  {
+    "category": "Frontend Technologies",
     "items": [
       "React",
-      "Express",
       "Next.js",
-      "Node.js",
-      "Django",
-      "Maven",
-      "Postgres",
-      "Spring Hibernate",
-      "Gulp",
-      "Gradle",
-      "Apache Tomcat",
-      "Apache Kafka"
+      "Svelte",
+      "Vite",
+      "Tailwind",
+      "Formik",
+      "Figma"
     ]
   },
   {
-    "category": "Cloud Technologies",
+    "category": "Data & Streaming",
+    "items": [
+      "Apache Kafka",
+      "Redpanda",
+      "Apache Flink",
+      "pandas",
+      "TensorFlow"
+    ]
+  },
+  {
+    "category": "Cloud & Infrastructure",
     "items": [
       "AWS Lambda",
-      "AWS DynamoDB",
       "AWS S3",
-      "AWS Route 53",
-      "AWS CloudFront",
+      "AWS DynamoDB",
+      "AWS SNS",
+      "AWS SQS",
+      "AWS Step Functions",
       "AWS API Gateway",
+      "AWS CloudFront",
+      "AWS ALB",
+      "AWS Route 53",
+      "AWS CloudWatch",
       "AWS CodePipeline",
+      "AWS CDK",
       "AWS Certificate Manager",
-      "AWS Application Load Balancer"
+      "Supabase",
+      "Cloudflare R2"
     ]
   },
   {
-    "category": "Developer Tools",
+    "category": "AI & Developer Tooling",
     "items": [
-      "Linux",
+      "Claude Code",
+      "Kiro AI",
+      "MCP",
+      "LLM Prompt Engineering",
+      "Custom Steering Files",
+      "CDK Construct Libraries",
       "Git",
       "Docker",
+      "Postman",
+      "DataGrip",
+      "Atlassian JIRA",
+      "Atlassian Confluence",
+      "Unix",
       "VS Code",
       "IntelliJ",
+      "Linux",
       "VIM",
-      "Atlassian JIRA",
       "Unified Modeling Language",
       "Miro",
-      "Postman",
-      "Kiro",
-      "Claude"
+      "Kiro"
     ]
   },
   {
-    "category": "Libraries",
+    "category": "Databases",
     "items": [
+      "PostgreSQL",
+      "DynamoDB",
+      "Supabase",
+      "Postgres"
+    ]
+  },
+  {
+    "category": "Testing & Libraries",
+    "items": [
+      "JUnit",
+      "Mockito",
       "GoogleTest",
+      "Jest",
+      "AWS CDK",
       "TensorFlow",
       "pandas",
       "Formik",
       "Braintree",
-      "JUnit",
-      "Mockito",
-      "AWS cdk"
+      "AWS cdk",
+      "Gulp"
     ]
   }
 ]

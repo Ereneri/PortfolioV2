@@ -11,6 +11,7 @@ import img2048 from "../assets/2048.png";
 import earthImg from "../assets/Earth.png";
 import otdThumbImg from "../assets/otdThumb.png";
 import gameThumbImg from "../assets/gameThumb.png";
+import caffein8Img from "../assets/caffein8.png";
 
 // Create image map for project thumbnails
 const projectImages = {
@@ -19,7 +20,8 @@ const projectImages = {
   "2048.png": img2048,
   "Earth.png": earthImg,
   "otdThumb.png": otdThumbImg,
-  "gameThumb.png": gameThumbImg
+  "gameThumb.png": gameThumbImg,
+  "caffein8.png": caffein8Img
 };
 
 // Helper function to get image path - for dynamic media, use require

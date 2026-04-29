@@ -5,23 +5,22 @@
     "positions": [
       {
         "title": "Associate Software Engineer",
-        "period": "June 2025-Present",
+        "period": "June 2025 - Present",
         "responsibilities": [
-          "Developed a real-time web application enabling concurrent users to strategically combine jobs, reducing planned man-hours by nearly 30%",
-          "Engineered networking solutions to permit AWS services to interact with on-prem resources via an Application Load Balancer over a shared VPC origin",
-          "Designed an independent serverless file management service using AWS Lambda, API Gateway, and S3 with CloudFront to decouple file storage from a monolithic application",
-          "Led development on a new serverless order processing service for nested products using AWS Step Functions and AWS SQS",
-          "Optimized SQL query and Lambda execution performance for the order processing service, halving execution time while using 4 times less memory"
+          "Led development of a client-facing onboarding platform replacing fragmented email and FTP workflows with centralized file exchange, due date tracking, and client approvals",
+          "Built a real-time job batching platform with React, Node.js, and WebSockets enabling concurrent coordination of complex production workflows, cutting required man-hours by 30%",
+          "Engineered a serverless file ingestion system (AWS Lambda, DynamoDB, S3) unifying a legacy ERP, new S3 bucket, and on-prem file server into a single event stream consumed by downstream automation teams",
+          "Eliminated manual SSL certificate provisioning for a dozen operators by deploying an AWS ALB solution bridging cloud and on-premises systems, improving both security and user onboarding",
+          "Designed internal AI developer tooling to increase delivery velocity with LLMs, MCP, and custom steering files, including reusable AWS CDK construct libraries for Lambda, API Gateway, CloudFront, and event processors"
         ]
       },
       {
         "title": "Intern, Software Engineer",
-        "period": "Summer 2024",
+        "period": "May 2024 - August 2024",
         "responsibilities": [
-          "Engineered an AWS Lambda function to address production memory constraints caused by Java ImageIO caching",
-          "Built an automated QR code generation service incorporated into work tickets, eliminating manual retrieval and reducing operational costs",
-          "Developed and executed Level 2 data passing for Braintree transaction requests, reducing transaction fees",
-          "Upgraded the existing checkout process by adding “Checkout with PayPal” utilizing the Braintree user vault"
+          "Shipped a QR code generation service embedded in work tickets, replacing printed engineering packets as part of a company-wide paperless initiative, still in production with 1,000+ daily invocations",
+          "Reduced per-transaction fees by 0.2-0.5% on corporate transactions by implementing Level 2 data sharing in Braintree payment requests",
+          "Integrated PayPal Checkout into an Angular frontend, expanding payment options and reducing purchase friction"
         ]
       }
     ]
@@ -32,14 +31,10 @@
     "positions": [
       {
         "title": "Intern, Java Developer",
-        "period": "Summer 2023",
+        "period": "May 2023 - August 2023",
         "responsibilities": [
-          "Resolved a two-year-old production bug and upgraded two legacy production automations",
-          "Implemented a new JavaScript web scraping design that decreased execution time by up to 80%",
-          "Devised an automated task bot to validate a process with upwards of 17,000 daily transactions",
-          "Designed an alert that notified the team of low work volume, eliminating the need for 6 daily manual checks",
-          "Successfully developed production automation with 20% less execution time than estimated",
-          "Learned the software development pipeline, Agile workflow, and HelpDesk incident ticketing"
+          "Automated test execution against internal portals via JavaScript web scraping, cutting automation runtime by 80%",
+          "Built a cron job to replace manual team review of 17,000+ daily events, significantly reducing operational overhead"
         ]
       }
     ]

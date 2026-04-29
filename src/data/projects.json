@@ -1,17 +1,69 @@
 [
   {
+    "id": "caffein8-social",
+    "updatedAt": "In Development",
+    "name": "caffein8.social",
+    "image": "caffein8.png",
+    "description": "A full-stack social platform for energy drink enthusiasts featuring barcode scanning, consumption tracking, and community-driven drink cataloging.",
+    "fullDescription": "caffein8.social is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can scan barcodes to log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The MVP is a React web application architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. A native iOS app is planned following MVP completion, featuring native barcode scanning and full feature parity.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Supabase",
+      "PostgreSQL",
+      "Supabase Edge Functions",
+      "Cloudflare R2",
+      "MCP",
+      "Kiro AI"
+    ],
+    "githubUrl": "",
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "image",
+        "url": "caffein8/brand_profile.png",
+        "caption": "Brand Profile View",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/homepage.png",
+        "caption": "caffein8.social Homepage Feed",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/profile.png",
+        "caption": "User Profile with Drink Archive",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/mobile_profile.png",
+        "caption": "Mobile Profile View",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/mobile_signin.png",
+        "caption": "Mobile Sign In Screen",
+        "width": "small"
+      }
+    ]
+  },
+  {
     "id": "kafka-streams",
-    "updatedAt": "April 11th, 2025",
+    "updatedAt": "April 2025",
     "name": "Kafka Streams",
     "image": "kafka.jpg",
-    "description": "Real-time data processing applications built with Apache Kafka Streams to analyze music streaming trends and business metrics.",
-    "fullDescription": "Developed three Apache Kafka Streams applications for a fictional music streaming platform, 'Utopia', as part of a Master's course on Event-Driven Architecture. These applications process real-time event streams to deliver business insights using advanced streaming concepts like stateful aggregations, multi-stream joins, and windowed operations. The project answers three key business questions: identifying trending artists by demographic and location, tracking the most profitable venues based on ticket sales, and clustering customers who share the same favorite artist for targeted campaigns.",
+    "description": "Stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering for large-scale real-time event processing.",
+    "fullDescription": "Built stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering to process large-scale real-time events across a distributed architecture. Developed three Apache Kafka Streams applications for a fictional music streaming platform, 'Utopia', as part of a Master's course on Event-Driven Architecture. These applications process real-time event streams to deliver business insights using advanced streaming concepts. The project answers three key business questions: identifying trending artists by demographic and location, tracking the most profitable venues based on ticket sales, and clustering customers who share the same favorite artist for targeted campaigns.",
     "technologies": [
       "Java",
-      "Apache Kafka",
-      "Kafka Streams",
-      "Stream Processing",
-      "Event-Driven Architecture"
+      "Apache Kafka Streams",
+      "Event-Driven Architecture",
+      "Stream Processing"
     ],
     "githubUrl": "https://github.com/Ereneri/stream-processing-workshop-group-ug",
     "liveUrl": "",
