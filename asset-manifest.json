@@ -1,23 +1,29 @@
 {
   "files": {
     "main.css": "/static/css/main.f82e0d32.css",
-    "main.js": "/static/js/main.eb463280.js",
+    "main.js": "/static/js/main.030ea859.js",
     "static/js/453.44d0881a.chunk.js": "/static/js/453.44d0881a.chunk.js",
     "static/media/flappyBirdAIDemo.mov": "/static/media/flappyBirdAIDemo.35eba7f9bb8fe3168059.mov",
     "static/media/flappybird.mov": "/static/media/flappybird.63a79b38f2d6b88eb7d0.mov",
     "static/media/profilehero.jpg": "/static/media/profilehero.470b91e626cf7eb77bd1.jpg",
+    "static/media/profile.png": "/static/media/profile.515643739e15bc10fe80.png",
+    "static/media/homepage.png": "/static/media/homepage.96367b533a0b85924387.png",
+    "static/media/caffein8.png": "/static/media/caffein8.69e7d74c395d13317b14.png",
+    "static/media/catalog.png": "/static/media/catalog.5323e45a495e5e2135d6.png",
     "static/media/gameplay2.png": "/static/media/gameplay2.45ee3dc1816c2b819453.png",
     "static/media/earth-talking.png": "/static/media/earth-talking.f4b27d606fd30b9975c4.png",
     "static/media/neptune-resp.png": "/static/media/neptune-resp.a918fdb8ad554a7a5351.png",
     "static/media/p1.png": "/static/media/p1.8ed01b7b5ba7f59ce766.png",
     "static/media/p3.png": "/static/media/p3.4f0ca7317d2cc2e21fcf.png",
     "static/media/corkboard_background.png": "/static/media/corkboard_background.7324c003bf2c3a651fcb.png",
+    "static/media/brand_profile.png": "/static/media/brand_profile.6743f19fca067e9c4163.png",
     "static/media/p2.png": "/static/media/p2.912623d58644b1ab3057.png",
     "static/media/AI_Final_Project_Analysis.pdf": "/static/media/AI_Final_Project_Analysis.06dd4d9978b9f6130a4b.pdf",
     "static/media/eduLevel.png": "/static/media/eduLevel.eaea1a0f6fa0445fcec8.png",
     "static/media/lists.png": "/static/media/lists.3ff40096db2783d9dd87.png",
     "static/media/invite.png": "/static/media/invite.15ab66f8cb3b509eb621.png",
     "static/media/AI_Final_Project.pdf": "/static/media/AI_Final_Project.2204e163a676ade22673.pdf",
+    "static/media/mobile_profile.png": "/static/media/mobile_profile.2760f7b521ea1a521317.png",
     "static/media/GamePlay.png": "/static/media/GamePlay.2f932c7f814ce3de8594.png",
     "static/media/Help.png": "/static/media/Help.884ece2451aff4e24a0f.png",
     "static/media/DroneDelivery.png": "/static/media/DroneDelivery.4d197a71eeb42d5ab041.png",
@@ -35,6 +41,7 @@
     "static/media/umn.png": "/static/media/umn.f413da324538cfce2fad.png",
     "static/media/createlist.png": "/static/media/createlist.494fb8e4d0448d542630.png",
     "static/media/aigameplay2.png": "/static/media/aigameplay2.96ce0ef306f01e0ff736.png",
+    "static/media/mobile_signin.png": "/static/media/mobile_signin.02b54cb1ab21e628203f.png",
     "static/media/aigameplay1.png": "/static/media/aigameplay1.0d0fe3a02f789421c94d.png",
     "static/media/ReadyScreen.png": "/static/media/ReadyScreen.caceea3d4d5f6855b725.png",
     "static/media/mList.png": "/static/media/mList.c34c065198da777a8162.png",
@@ -52,11 +59,11 @@
     "index.html": "/index.html",
     "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
     "main.f82e0d32.css.map": "/static/css/main.f82e0d32.css.map",
-    "main.eb463280.js.map": "/static/js/main.eb463280.js.map",
+    "main.030ea859.js.map": "/static/js/main.030ea859.js.map",
     "453.44d0881a.chunk.js.map": "/static/js/453.44d0881a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f82e0d32.css",
-    "static/js/main.eb463280.js"
+    "static/js/main.030ea859.js"
   ]
 }
