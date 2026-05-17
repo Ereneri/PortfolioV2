@@ -1,11 +1,11 @@
 [
   {
-    "id": "caffein8-social",
+    "id": "caffein8",
     "updatedAt": "In Development",
-    "name": "caffein8.social",
+    "name": "caffein8",
     "image": "caffein8.png",
     "description": "A full-stack social platform for energy drink enthusiasts featuring barcode scanning, consumption tracking, and community-driven drink cataloging.",
-    "fullDescription": "caffein8.social is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can scan barcodes to log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The MVP is a React web application architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. A native iOS app is planned following MVP completion, featuring native barcode scanning and full feature parity.",
+    "fullDescription": "caffein8 is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can scan barcodes to log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The MVP is a React web application architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. A native iOS app is planned following MVP completion, featuring native barcode scanning and full feature parity.",
     "technologies": [
       "React",
       "TypeScript",
@@ -22,14 +22,50 @@
     "media": [
       {
         "type": "image",
+        "url": "caffein8/mobile_catalog.png",
+        "caption": "Mobile Drink Catalog",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/mobile_details.png",
+        "caption": "Mobile Drink Details",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/mobile_view_drink.png",
+        "caption": "Mobile View Drink",
+        "width": "small"
+      },
+      {
+        "type": "image",
         "url": "caffein8/brand_profile.png",
         "caption": "Brand Profile View",
         "width": "full"
       },
       {
         "type": "image",
+        "url": "caffein8/mobile_view_profile.png",
+        "caption": "Mobile View Profile",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/mobile_profile.png",
+        "caption": "Mobile Profile View",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "caffein8/catalog.png",
+        "caption": "Drink Catalog",
+        "width": "medium"
+      },
+      {
+        "type": "image",
         "url": "caffein8/homepage.png",
-        "caption": "caffein8.social Homepage Feed",
+        "caption": "caffein8 Homepage Feed",
         "width": "medium"
       },
       {
@@ -37,18 +73,6 @@
         "url": "caffein8/profile.png",
         "caption": "User Profile with Drink Archive",
         "width": "medium"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_profile.png",
-        "caption": "Mobile Profile View",
-        "width": "small"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_signin.png",
-        "caption": "Mobile Sign In Screen",
-        "width": "small"
       }
     ]
   },

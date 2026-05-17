@@ -94,9 +94,12 @@ function ProjectDetail() {
     return (
       <div className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
         <div className="flex flex-col gap-8 items-center justify-center">
-          <h1 className="text-6xl font-extrabold text-light">
-            Project Not Found
+          <h1 className="text-6xl font-extrabold text-light code-font">
+            404
           </h1>
+          <h2 className="font-semibold text-light">
+            Project Not Found
+          </h2>
           <Link
             to="/projects"
             className="text-xl primary-text hover:underline flex items-center gap-2"
@@ -110,8 +113,8 @@ function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
-      <div className="flex flex-col gap-8">
+    <div className="min-h-screen max-w-[1100px] mx-auto md:py-8 px-4 py-4">
+      <div className="flex flex-col gap-4">
         <button
           onClick={() => navigate("/projects")}
           className="text-xl primary-text hover:underline flex items-center gap-2 w-fit transition-colors"

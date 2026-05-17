@@ -21,7 +21,7 @@ function Projects() {
   }, [searchTerm]);
 
   return (
-    <div className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
+    <div className="min-h-screen max-w-[1100px] mx-auto md:py-8 px-4 py-4">
       <div className="flex flex-col gap-8">
         <h1 className="md:text-6xl text-4xl font-extrabold text-light">
           Projects
@@ -37,10 +37,6 @@ function Projects() {
               className="w-full px-4 py-3 rounded-lg border-primary bg-transparent focus:outline-none transition-colors text-light"
             />
           </div>
-        </div>
-
-        <div className="text-sm">
-          Showing {filteredProjects.length} of {projectsList.length} projects
         </div>
 
         <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">

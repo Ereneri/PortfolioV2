@@ -7,20 +7,19 @@
         "title": "Associate Software Engineer",
         "period": "June 2025 - Present",
         "responsibilities": [
-          "Led development of a client-facing onboarding platform replacing fragmented email and FTP workflows with centralized file exchange, due date tracking, and client approvals",
-          "Built a real-time job batching platform with React, Node.js, and WebSockets enabling concurrent coordination of complex production workflows, cutting required man-hours by 30%",
-          "Engineered a serverless file ingestion system (AWS Lambda, DynamoDB, S3) unifying a legacy ERP, new S3 bucket, and on-prem file server into a single event stream consumed by downstream automation teams",
-          "Eliminated manual SSL certificate provisioning for a dozen operators by deploying an AWS ALB solution bridging cloud and on-premises systems, improving both security and user onboarding",
-          "Designed internal AI developer tooling to increase delivery velocity with LLMs, MCP, and custom steering files, including reusable AWS CDK construct libraries for Lambda, API Gateway, CloudFront, and event processors"
+          "Cut production workflow coordination time by 30% by building a real-time job batching platform enabling concurrent scheduling of complex multi-step jobs.",
+          "Eliminated manual SSL certificate provisioning for 12+ operators by deploying an AWS ALB-based TLS termination solution bridging cloud and on-premises infrastructure.",
+          "Engineered a centralized client portal replacing fragmented email and FTP workflows with unified file exchange, due-date tracking, and approval workflows for external clients.",
+          "Unified three disparate file sources (legacy ERP, external ERP, on-prem) into a single source-of-truth microservice with a full CRUD API and standardized event stream, eliminating manual handoffs for downstream automation teams.",
+          "Automated end-to-end developer workflows across 6+ repos using Claude Code, Kiro AI, and custom MCP integrations (Playwright, Postman), enabling autonomous PR reviews, branch management, and UI/API regression testing."
         ]
       },
       {
         "title": "Intern, Software Engineer",
         "period": "May 2024 - August 2024",
         "responsibilities": [
-          "Shipped a QR code generation service embedded in work tickets, replacing printed engineering packets as part of a company-wide paperless initiative, still in production with 1,000+ daily invocations",
-          "Reduced per-transaction fees by 0.2-0.5% on corporate transactions by implementing Level 2 data sharing in Braintree payment requests",
-          "Integrated PayPal Checkout into an Angular frontend, expanding payment options and reducing purchase friction"
+          "Shipped a QR code generation service embedded in production work tickets, reaching 1,000+ daily invocations and eliminating printed engineering packets company-wide.",
+          "Saved 0.2-0.5% on corporate transaction fees by implementing Level 2 purchasing card data in Braintree payment requests."
         ]
       }
     ]
@@ -33,8 +32,8 @@
         "title": "Intern, Java Developer",
         "period": "May 2023 - August 2023",
         "responsibilities": [
-          "Automated test execution against internal portals via JavaScript web scraping, cutting automation runtime by 80%",
-          "Built a cron job to replace manual team review of 17,000+ daily events, significantly reducing operational overhead"
+          "Reduced QA automation runtime by 80% by replacing a slow manual test process with a JavaScript web-scraping harness that executed regression suites against internal portals.",
+          "Eliminated daily manual review of 17,000+ events by building a cron job that automatically triaged and routed alerts, freeing the team for higher-priority work."
         ]
       }
     ]
