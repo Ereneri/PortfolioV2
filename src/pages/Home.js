@@ -15,10 +15,7 @@ function Home() {
       className="min-h-screen flex flex-col gap-0 md:max-w-[1100px] mx-auto md:px-0 px-4"
     >
       {/* ── Hero ── */}
-      <section className="flex flex-col gap-3 pt-8 pb-8 md:pt-16 md:pb-12">
-        <p className="code-font text-sm primary-text uppercase tracking-widest">
-          Software Engineer &amp;&amp; Computer Scientist
-        </p>
+      <section className="flex flex-col gap-3 pt-8 pb-8 md:pt-16">
         <h1 className="md:text-8xl text-5xl font-extrabold text-light leading-none tracking-tight">
           Eren Erisgen
         </h1>
@@ -57,7 +54,7 @@ function Home() {
       </section> */}
 
       {/* ── About intro ── */}
-      <section className="py-8 md:py-12">
+      <section className="py-8">
         <div className="flex gap-6 md:gap-8 items-center flex-col md:flex-row">
           <div className="w-36 md:w-48 shrink-0">
             <img
@@ -108,7 +105,7 @@ function Home() {
 
       {/* ── Currently Building ── */}
       {currentlyBuilding && (
-        <section className="py-8 md:py-12">
+        <section className="py-8">
           <h2 className="text-2xl font-bold primary-text uppercase tracking-tight mb-6">
             Currently Building
           </h2>
@@ -179,7 +176,7 @@ function Home() {
       )}
 
       {/* ── Featured Projects ── */}
-      <section className="py-8 md:py-12 pb-12">
+      <section className="py-8">
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="text-2xl font-bold primary-text uppercase tracking-tight">
             Featured Projects
