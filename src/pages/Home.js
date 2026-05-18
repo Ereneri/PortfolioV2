@@ -10,36 +10,70 @@ const featuredProjects = projectsList.filter((p) => p.featured && !p.currentlyBu
 
 function Home() {
   return (
-    <div
-      id="home"
-      className="min-h-screen flex flex-col gap-8 md:max-w-[1100px] mx-auto py-8 pt-16 md:px-0 px-4"
+    <main
+      id="main-content"
+      className="min-h-screen flex flex-col gap-0 md:max-w-[1100px] mx-auto md:px-0 px-4"
     >
-      <div className="flex flex-col p-4 gap-4 justify-center items-center">
-        <h1 className="md:text-9xl font-extrabold text-light leading-none text-7xl">
+      {/* ── Hero ── */}
+      <section className="flex flex-col gap-3 pt-8 pb-8 md:pt-16 md:pb-12">
+        <p className="code-font text-sm primary-text uppercase tracking-widest">
+          Software Engineer &amp;&amp; Computer Scientist
+        </p>
+        <h1 className="md:text-8xl text-5xl font-extrabold text-light leading-none tracking-tight">
           Eren Erisgen
         </h1>
-        <h2 className="text-2xl secondary-text font-semibold code-font uppercase">
-          Software Engineer && Computer Scientist
-        </h2>
-      </div>
+        <p className="text-base text-white/50 max-w-md">
+          Building thoughtful software from Minneapolis, MN.
+        </p>
+        <div className="flex gap-3 mt-2 flex-wrap">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 text-white text-sm font-medium transition-colors"
+          >
+            View Projects
+            <ArrowRightIcon className="w-4 h-4" />
+          </Link>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 hover:border-white/40 text-white/80 hover:text-white text-sm font-medium transition-colors"
+          >
+            About Me
+          </Link>
+        </div>
+      </section>
 
-      <div className="mx-auto md:max-w-full py-16">
-        <div className="flex gap-8 items-center flex-col md:flex-row">
-          <div className="basis-1/3">
+      {/* ── Stats strip ──
+      <section className="py-8 grid grid-cols-3 gap-4" aria-label="Quick stats">
+        {stats.map(({ label, value }) => (
+          <div key={label} className="flex flex-col gap-0.5">
+            <span className="md:text-3xl text-2xl font-extrabold primary-text leading-none">
+              {value}
+            </span>
+            <span className="text-xs text-white/50 uppercase tracking-wide code-font">
+              {label}
+            </span>
+          </div>
+        ))}
+      </section> */}
+
+      {/* ── About intro ── */}
+      <section className="py-8 md:py-12">
+        <div className="flex gap-6 md:gap-8 items-center flex-col md:flex-row">
+          <div className="w-36 md:w-48 shrink-0">
             <img
               src={profilePicture}
-              alt="Profile"
-              className="md:rounded-full rounded-lg"
+              alt="Eren Erisgen"
+              className="rounded-2xl w-full aspect-square object-cover object-top"
               loading="lazy"
             />
           </div>
-          <div className="basis-2/3 flex flex-col gap-4">
-            <h3 className="text-2xl text-left font-bold primary-text uppercase">
+          <div className="flex flex-col gap-3 md:gap-4">
+            <h2 className="text-xl md:text-2xl font-bold primary-text uppercase tracking-tight">
               Welcome
-            </h3>
-            <p className="md:text-xl text-light md:text-justify text-left">
-              Howdy! I'm Eren Erisgen, a Software Engineer and Computer Scientist
-              based in Minneapolis, Minnesota. Graduate from the{" "}
+            </h2>
+            <p className="text-sm md:text-lg text-white/80 leading-relaxed">
+              Howdy! I'm Eren, a Software Engineer based in Minneapolis, Minnesota.
+              Proud graduate from the{" "}
               <a
                 className="primary-text hover:underline transition-colors"
                 target="_blank"
@@ -48,7 +82,7 @@ function Home() {
               >
                 University of Minnesota
               </a>{" "}
-              with a B.S. in Computer Science and currently work as an Associate
+              with a B.S. in Computer Science, currently working as an Associate
               Software Engineer at{" "}
               <a
                 className="primary-text hover:underline transition-colors"
@@ -58,86 +92,120 @@ function Home() {
               >
                 The Bernard Group
               </a>
-              . During my time at university, I explored everything from
-              graduate-level algorithms to software engineering and event-driven
-              architecture. I love working with Java, C, and JavaScript. On this
-              site, you'll find some of my favorite projects and links to the
-              source code, they showcase what I've learned both in school and in
-              industry.
+              . I've explored everything from graduate-level algorithms to
+              event-driven architecture and AI-native development workflows.
             </p>
-          </div>
-        </div>
-
-        {/* Currently Building */}
-        {currentlyBuilding && (
-          <div className="pt-24">
-            <h3 className="text-2xl font-bold primary-text uppercase items-center pb-8">
-              Currently Building
-            </h3>
             <Link
-              to={`/projects/${currentlyBuilding.id}`}
-              className="w-full rounded-3xl bg-tertiary gap-0 flex flex-col text-light transition-all cursor-pointer duration-300 group hover:scale-[1.02] hover:bg-[var(--clr-info-a0)] overflow-hidden"
+              to="/about"
+              className="inline-flex items-center gap-1.5 text-sm primary-text hover:underline transition-colors w-fit"
             >
-              <div className="p-8 flex flex-col gap-4 flex-1">
-                {/* Header row: icon + name + badge */}
-                <div className="flex items-center gap-4 flex-wrap">
-                  <img
-                    src={caffein8Thumb}
-                    alt={`${currentlyBuilding.name} icon`}
-                    className="w-12 h-12 rounded-xl object-cover shrink-0"
-                    loading="lazy"
-                  />
-                  <span className="text-4xl code-font font-bold uppercase">
-                    {currentlyBuilding.name}
-                  </span>
-                  <span className="flex items-center gap-1.5 bg-[var(--clr-success-a0)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--clr-success-a20)] animate-pulse inline-block" />
-                    In Development
-                  </span>
-                </div>
-                <p className="text-base leading-relaxed text-left">
-                  {currentlyBuilding.description}
-                </p>
-              </div>
-              {/* View Project footer row — matches ProjectCard */}
-              <div className="px-8 pb-8">
-                <div className="rounded-xl text-base gap-2 flex justify-between transition-colors duration-300">
-                  <span className="uppercase whitespace-nowrap">View Project</span>
-                  <ArrowRightIcon className="inline secondary-text w-5 h-5 mr-4 group-hover:mr-0 transition-all duration-300" />
-                </div>
-              </div>
+              Full background
+              <ArrowRightIcon className="w-4 h-4" />
             </Link>
           </div>
-        )}
+        </div>
+      </section>
 
-        {/* Featured Projects */}
-        <div>
-          <h3 className="text-2xl font-bold primary-text uppercase items-center pt-24 pb-8">
-            Featured Projects
-          </h3>
-          <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
-            {featuredProjects.map(({ id, name, description, image }) => (
-              <ProjectCard
-                key={id}
-                id={id}
-                name={name}
-                description={description}
-                image={image}
+      {/* ── Currently Building ── */}
+      {currentlyBuilding && (
+        <section className="py-8 md:py-12">
+          <h2 className="text-2xl font-bold primary-text uppercase tracking-tight mb-6">
+            Currently Building
+          </h2>
+          <Link
+            to={`/projects/${currentlyBuilding.id}`}
+            className="w-full rounded-xl bg-tertiary flex flex-row md:flex-col text-light transition-all cursor-pointer duration-200 group hover:bg-[var(--clr-hover-surface)] overflow-hidden border border-white/5 hover:border-white/10"
+          >
+            {/* Thumbnail sidebar on mobile, hidden on desktop (no standalone thumb for this card) */}
+            <div className="w-24 shrink-0 md:hidden overflow-hidden">
+              <img
+                src={caffein8Thumb}
+                alt={`${currentlyBuilding.name} thumbnail`}
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
-            ))}
-          </div>
-          <div className="pt-8 text-center">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 text-lg primary-text hover:underline transition-colors"
-            >
-              View all projects
-              <ArrowRightIcon className="w-5 h-5" />
-            </Link>
-          </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex flex-col flex-1 p-3 md:p-6 gap-2 md:gap-4 min-w-0">
+              {/* Header row */}
+              <div className="flex items-center gap-2 md:gap-3 flex-wrap">
+                <img
+                  src={caffein8Thumb}
+                  alt={`${currentlyBuilding.name} icon`}
+                  className="hidden md:block w-10 h-10 rounded-xl object-cover shrink-0"
+                  loading="lazy"
+                />
+                <span className="text-sm md:text-2xl code-font font-bold uppercase tracking-tight truncate">
+                  {currentlyBuilding.name}
+                </span>
+                <span className="flex items-center gap-1.5 bg-[var(--clr-success-a0)]/80 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--clr-success-a20)] animate-pulse inline-block" />
+                  <span className="hidden sm:inline">In Development</span>
+                  <span className="sm:hidden">In Dev</span>
+                </span>
+              </div>
+
+              <p className="text-xs md:text-sm text-white/60 leading-relaxed line-clamp-2 md:line-clamp-none">
+                {currentlyBuilding.description}
+              </p>
+
+              {/* Tech tags — desktop only */}
+              {currentlyBuilding.technologies && (
+                <div className="hidden md:flex flex-wrap gap-1.5">
+                  {currentlyBuilding.technologies.slice(0, 6).map((tech) => (
+                    <span key={tech} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                  {currentlyBuilding.technologies.length > 6 && (
+                    <span className="tech-tag">
+                      +{currentlyBuilding.technologies.length - 6} more
+                    </span>
+                  )}
+                </div>
+              )}
+
+              {/* CTA */}
+              <div className="flex justify-between items-center mt-auto">
+                <span className="text-xs uppercase tracking-wide text-white/40 group-hover:text-white/60 transition-colors font-medium">
+                  View Project
+                </span>
+                <ArrowRightIcon className="w-3.5 h-3.5 secondary-text mr-2 group-hover:mr-0 transition-all duration-200" />
+              </div>
+            </div>
+          </Link>
+        </section>
+      )}
+
+      {/* ── Featured Projects ── */}
+      <section className="py-8 md:py-12 pb-12">
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="text-2xl font-bold primary-text uppercase tracking-tight">
+            Featured Projects
+          </h2>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
+          >
+            View all
+            <ArrowRightIcon className="w-3.5 h-3.5" />
+          </Link>
         </div>
-      </div>
-    </div>
+        <div className="gap-6 grid-cols-1 md:grid-cols-2 grid">
+          {featuredProjects.map(({ id, name, description, image, technologies }) => (
+            <ProjectCard
+              key={id}
+              id={id}
+              name={name}
+              description={description}
+              image={image}
+              technologies={technologies}
+            />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 

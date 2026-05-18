@@ -1,8 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
-// Import all known thumbnails so webpack bundles them correctly
 import caffein8Thumb from "../assets/caffein8.png";
 import kafkaThumb from "../assets/kafka.jpg";
 import flappybirdThumb from "../assets/flappybird.jpg";
@@ -21,21 +19,19 @@ const thumbnailMap = {
   "gameThumb.png": gameThumb,
 };
 
-function getThumbnail(image) {
-  if (!image) return null;
-  return thumbnailMap[image] ?? null;
-}
-
-function ProjectCard({ id, name, description, image }) {
-  const thumbnail = getThumbnail(image);
+function ProjectCard({ id, name, description, image, technologies }) {
+  const thumbnail = thumbnailMap[image] ?? null;
+  const visibleTechs = technologies ? technologies.slice(0, 4) : [];
+  const extraCount = technologies ? Math.max(0, technologies.length - 4) : 0;
 
   return (
     <Link
       to={`/projects/${id}`}
-      className="mx-auto w-full rounded-3xl bg-tertiary gap-0 flex flex-col text-light transition-all cursor-pointer duration-300 group hover:scale-[1.02] hover:bg-[var(--clr-info-a0)] overflow-hidden"
+      className="w-full rounded-xl bg-tertiary flex flex-row md:flex-col text-light transition-all duration-200 group hover:bg-[var(--clr-hover-surface)] overflow-hidden border border-white/5 hover:border-white/10"
     >
+      {/* Thumbnail — sidebar on mobile, full-width header on desktop */}
       {thumbnail && (
-        <div className="w-full h-44 overflow-hidden">
+        <div className="w-24 shrink-0 md:w-full md:h-40 overflow-hidden">
           <img
             src={thumbnail}
             alt={`${name} thumbnail`}
@@ -44,17 +40,39 @@ function ProjectCard({ id, name, description, image }) {
           />
         </div>
       )}
-      <div className="p-8 flex flex-col gap-4 flex-1 justify-between">
-        <div className="text-left flex flex-col gap-4">
-          <span className="text-4xl code-font font-bold transition-colors uppercase">
+
+      {/* Content */}
+      <div className="flex flex-col justify-between flex-1 p-3 md:p-5 gap-2 md:gap-3 min-w-0">
+        <div className="flex flex-col gap-1 md:gap-2">
+          <span className="text-sm md:text-xl code-font font-bold uppercase tracking-tight truncate">
             {name}
           </span>
-          <span className="text-base">{description}</span>
+          <span className="text-xs md:text-sm text-white/60 leading-relaxed line-clamp-2 md:line-clamp-3">
+            {description}
+          </span>
         </div>
-        <button className="rounded-xl text-base gap-2 flex justify-between transition-colors duration-300">
-          <span className="uppercase whitespace-nowrap">View Project</span>
-          <ArrowRightIcon className="inline secondary-text w-5 h-5 mr-4 group-hover:mr-0 transition-all duration-300" />
-        </button>
+
+        {/* Tech tags — desktop only */}
+        {visibleTechs.length > 0 && (
+          <div className="hidden md:flex flex-wrap gap-1.5">
+            {visibleTechs.map((tech) => (
+              <span key={tech} className="tech-tag">
+                {tech}
+              </span>
+            ))}
+            {extraCount > 0 && (
+              <span className="tech-tag">+{extraCount}</span>
+            )}
+          </div>
+        )}
+
+        {/* CTA */}
+        <div className="flex justify-between items-center">
+          <span className="text-xs uppercase tracking-wide text-white/40 group-hover:text-white/60 transition-colors font-medium">
+            View Project
+          </span>
+          <ArrowRightIcon className="w-3.5 h-3.5 secondary-text mr-2 group-hover:mr-0 transition-all duration-200" />
+        </div>
       </div>
     </Link>
   );

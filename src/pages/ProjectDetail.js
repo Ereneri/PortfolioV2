@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { ArrowDownTrayIcon, ArrowLeftIcon, ChevronLeftIcon } from "@heroicons/react/16/solid";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import {
+  ArrowDownTrayIcon,
+  ArrowLeftIcon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/16/solid";
 import projectsList from "../data/projects.json";
 import githubIcon from "../assets/github-mark-white.svg";
 
@@ -13,7 +17,6 @@ import otdThumbImg from "../assets/otdThumb.png";
 import gameThumbImg from "../assets/gameThumb.png";
 import caffein8Img from "../assets/caffein8.png";
 
-// Create image map for project thumbnails
 const projectImages = {
   "kafka.jpg": kafkaImg,
   "flappybird.jpg": flappybirdImg,
@@ -21,10 +24,9 @@ const projectImages = {
   "Earth.png": earthImg,
   "otdThumb.png": otdThumbImg,
   "gameThumb.png": gameThumbImg,
-  "caffein8.png": caffein8Img
+  "caffein8.png": caffein8Img,
 };
 
-// Helper function to get image path - for dynamic media, use require
 const getImagePath = (path) => {
   try {
     return require(`../assets/${path}`);
@@ -36,258 +38,254 @@ const getImagePath = (path) => {
 
 function ProjectDetail() {
   const { projectId } = useParams();
-  const navigate = useNavigate();
   const project = projectsList.find((p) => p.id === projectId);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState("");
+  const [lightboxImage, setLightboxImage] = useState({ src: "", caption: "" });
 
-  const openLightbox = (imageUrl) => {
-    setLightboxImage(imageUrl);
+  const openLightbox = (src, caption = "") => {
+    setLightboxImage({ src, caption });
     setLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    setLightboxImage("");
+    setLightboxImage({ src: "", caption: "" });
   };
 
-  // Handle ESC key and prevent background scrolling
   useEffect(() => {
-    if (lightboxOpen) {
-      // Prevent scrolling on the body
-      document.body.style.overflow = "hidden";
-
-      // Handle ESC key
-      const handleEscKey = (event) => {
-        if (event.key === "Escape") {
-          closeLightbox();
-        }
-      };
-
-      document.addEventListener("keydown", handleEscKey);
-
-      // Cleanup function
-      return () => {
-        document.body.style.overflow = "unset";
-        document.removeEventListener("keydown", handleEscKey);
-      };
-    }
+    if (!lightboxOpen) return;
+    document.body.style.overflow = "hidden";
+    const handleKey = (e) => {
+      if (e.key === "Escape") closeLightbox();
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKey);
+    };
   }, [lightboxOpen]);
 
-  // Helper function to get width class based on width property
   const getWidthClass = (width) => {
     switch (width) {
-      case "small":
-        return "w-full md:flex-[0_0_calc(33.333%-0.67rem)]";
-      case "medium":
-        return "w-full md:flex-[0_0_calc(50%-0.5rem)]";
-      case "large":
-        return "w-full md:flex-[0_0_calc(66.666%-0.67rem)]";
-      case "full":
-        return "w-full";
-      default:
-        return "w-full md:flex-[0_0_calc(50%-0.5rem)]";
+      case "small":  return "w-full md:flex-[0_0_calc(33.333%-0.67rem)]";
+      case "medium": return "w-full md:flex-[0_0_calc(50%-0.5rem)]";
+      case "large":  return "w-full md:flex-[0_0_calc(66.666%-0.67rem)]";
+      case "full":   return "w-full";
+      default:       return "w-full md:flex-[0_0_calc(50%-0.5rem)]";
     }
   };
 
   if (!project) {
     return (
-      <div className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
-        <div className="flex flex-col gap-8 items-center justify-center">
-          <h1 className="text-6xl font-extrabold text-light code-font">
-            404
-          </h1>
-          <h2 className="font-semibold text-light">
-            Project Not Found
-          </h2>
+      <main id="main-content" className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
+        <div className="flex flex-col gap-6 items-center justify-center pt-24">
+          <h1 className="text-6xl font-extrabold text-light code-font">404</h1>
+          <p className="text-white/60">Project not found.</p>
           <Link
             to="/projects"
-            className="text-xl primary-text hover:underline flex items-center gap-2"
+            className="text-sm primary-text hover:underline flex items-center gap-1.5"
           >
-            <ArrowLeftIcon className="w-5 h-5" />
-            Back to Projects
+            ← Back to Projects
           </Link>
         </div>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="min-h-screen max-w-[1100px] mx-auto md:py-8 px-4 py-4">
-      <div className="flex flex-col gap-4">
-        <button
-          onClick={() => navigate("/projects")}
-          className="text-xl primary-text hover:underline flex items-center gap-2 w-fit transition-colors"
-        >
-          <ChevronLeftIcon className="w-5 h-5" />
-          Back to Projects
-        </button>
+    <main id="main-content" className="min-h-screen max-w-[1100px] mx-auto md:py-10 px-4 py-5">
+      <div className="flex flex-col gap-5 md:gap-8">
 
-        <div className="flex flex-col gap-6">
-          <div className="flex gap-4 flex-wrap items-center">
+        {/* ── Back button ── */}
+        <Link
+          to="/projects"
+          className="inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors w-fit"
+        >
+          <ArrowLeftIcon className="w-4 h-4" />
+          Back to Projects
+        </Link>
+
+        {/* ── Project header ── */}
+        <div className="flex flex-col gap-4 md:gap-5">
+          {/* Title row */}
+          <div className="flex flex-row items-center gap-4">
+            {projectImages[project.image] && (
+              <img
+                src={projectImages[project.image]}
+                alt={`${project.name} icon`}
+                className="w-14 h-14 object-cover rounded-xl shrink-0"
+              />
+            )}
+            <div>
+              <h1 className="md:text-5xl text-3xl font-extrabold text-light code-font uppercase tracking-tight leading-none">
+                {project.name}
+              </h1>
+              <p className="text-xs text-white/40 mt-1 code-font">
+                Last updated: {project.updatedAt}
+              </p>
+            </div>
+          </div>
+
+          {/* Action buttons */}
+          <div className="flex gap-2 flex-wrap">
             {project.githubUrl && (
-              <button
-                onClick={() => window.open(project.githubUrl, "_blank")}
-                className="cursor-pointer bg-secondary text-light px-4 py-2 rounded-xl font-semibold transition-all uppercase hover:bg-[var(--clr-info-a0)] text-sm flex items-center gap-2"
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-sm font-medium transition-colors"
               >
-                <img src={githubIcon} className="w-4 h-4" alt="GitHub" />
-                Github
-              </button>
+                <img src={githubIcon} className="w-4 h-4" alt="" aria-hidden="true" />
+                GitHub
+              </a>
             )}
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-secondary hover:bg-opacity-80 text-light px-6 py-3 rounded-xl font-semibold transition-all uppercase"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-sm font-medium transition-colors"
               >
-                View Live Demo
+                <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                Live Demo
               </a>
             )}
-            <div>
-              <span className="text-md text-light">
-                Last Updated: <strong>{project.updatedAt}</strong>
-              </span>
-            </div>
           </div>
-          <div className="flex flex-row items-center justify-start">
-            <img
-              src={projectImages[project.image]}
-              alt={`${project.name} Screenshot`}
-              className="w-20 h-20 object-cover rounded-xl mr-6"
-            />
-            <h1 className="md:text-7xl text-4xl font-extrabold text-light code-font uppercase text-left">
-              {project.name}
-            </h1>
-          </div>
-          <div className="flex flex-wrap gap-3">
+
+          {/* Tech tags */}
+          <div className="flex flex-wrap gap-1.5">
             {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="bg-primary px-4 py-2 text-sm rounded-xl text-light bg-tertiary cursor-default"
-              >
+              <span key={tech} className="tech-tag">
                 {tech}
               </span>
             ))}
           </div>
 
-          <div className="flex flex-col gap-6">
-            <p className="md:text-lg text-light leading-relaxed text-left">
-              {project.fullDescription}
-            </p>
-          </div>
+          {/* Description */}
+          <p className="md:text-base text-sm text-white/80 leading-relaxed">
+            {project.fullDescription}
+          </p>
+        </div>
 
-          <div>
-            <h2 className="text-3xl font-bold text-secondary mb-4 uppercase">
-              Project Media
-            </h2>
-            {project.media.find((item) => item.type === "pdf") && (
-              <div className="w-full py-4 warning rounded-xl text-left px-6 my-8 text-light font-bold code-font cursor-default md:hidden block">
-                  Warning The PDFs may not load on mobile, if so please try the
-                  download links below.
-              </div>
-            )}
-            {project.media && project.media.length > 0 ? (
-              <div className="flex flex-wrap gap-4 w-full justify-center">
-                {project.media.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`${getWidthClass(
-                      item.width
-                    )} flex flex-col gap-2`}
-                  >
-                    {item.type === "image" ? (
-                      <div className="relative group">
-                        <img
-                          src={getImagePath(item.url)}
-                          alt={item.caption || `Screenshot ${index + 1}`}
-                          className="w-full h-auto rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-[1.02]"
-                          loading="lazy"
-                          onClick={() => openLightbox(getImagePath(item.url))}
-                        />
-                        {item.caption && (
-                          <p className="text-sm text-light mt-2 italic">
-                            {item.caption}
-                          </p>
-                        )}
-                      </div>
-                    ) : item.type === "video" ? (
-                      <div className="flex flex-col gap-2">
-                        <div className="relative group">
-                          <video
-                            src={getImagePath(item.url)}
-                            controls
-                            className="w-full h-auto rounded-xl shadow-lg"
-                            preload="metadata"
-                          >
-                            Your browser does not support the video tag.
-                          </video>
-                          {item.caption && (
-                            <p className="text-sm text-light mt-2 italic">
-                              {item.caption}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    ) : item.type === "pdf" ? (
-                      <div className="flex flex-col gap-2">
-                        <div className="bg-tertiary rounded-xl p-4 shadow-lg">
-                          <iframe
-                            src={getImagePath(item.url)}
-                            className="w-full h-[600px] rounded-lg"
-                            title={item.caption || `PDF ${index + 1}`}
-                          />
-                        </div>
-                        {item.caption && (
-                          <p className="text-sm text-light mt-2 italic">
-                            {item.caption}
-                          </p>
-                        )}
-                        <a
-                          href={getImagePath(item.url)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-secondary hover:underline text-sm flex items-center gap-1"
-                        >
-                            <ArrowDownTrayIcon className="w-4 h-4" />
-                          Download PDF
-                        </a>
-                      </div>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="text-light text-lg">
-                No screenshots available for this project yet.
-              </p>
-            )}
-          </div>
+        {/* ── Media ── */}
+        <div>
+          <h2 className="text-xl font-bold primary-text uppercase tracking-tight mb-6">
+            Project Media
+          </h2>
 
-          {/* Lightbox for images */}
-          {lightboxOpen && (
-            <div
-              className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-              onClick={closeLightbox}
-            >
-              <button
-                onClick={closeLightbox}
-                className="absolute top-4 right-4 text-white text-4xl hover:text-secondary transition-colors"
-                aria-label="Close lightbox"
-              >
-                &times;
-              </button>
-              <img
-                src={lightboxImage}
-                alt="Enlarged view"
-                className="max-w-full max-h-full object-contain rounded-xl"
-                onClick={(e) => e.stopPropagation()}
-              />
+          {/* Mobile PDF warning */}
+          {project.media.some((item) => item.type === "pdf") && (
+            <div className="warning rounded-lg mb-6 md:hidden">
+              PDFs may not load on mobile — use the download links below if needed.
             </div>
+          )}
+
+          {project.media && project.media.length > 0 ? (
+            <div className="flex flex-wrap gap-4 w-full">
+              {project.media.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${getWidthClass(item.width)} flex flex-col gap-2`}
+                >
+                  {item.type === "image" ? (
+                    <div className="relative group">
+                      <img
+                        src={getImagePath(item.url)}
+                        alt={item.caption || `Screenshot ${index + 1}`}
+                        className="w-full h-auto rounded-xl shadow-lg cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]"
+                        loading="lazy"
+                        onClick={() =>
+                          openLightbox(getImagePath(item.url), item.caption)
+                        }
+                      />
+                      {item.caption && (
+                        <p className="text-xs text-white/50 mt-1.5 italic">
+                          {item.caption}
+                        </p>
+                      )}
+                    </div>
+                  ) : item.type === "video" ? (
+                    <div className="flex flex-col gap-2">
+                      <video
+                        src={getImagePath(item.url)}
+                        controls
+                        className="w-full h-auto rounded-xl shadow-lg"
+                        preload="metadata"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                      {item.caption && (
+                        <p className="text-xs text-white/50 mt-1.5 italic">
+                          {item.caption}
+                        </p>
+                      )}
+                    </div>
+                  ) : item.type === "pdf" ? (
+                    <div className="flex flex-col gap-2">
+                      <div className="bg-tertiary rounded-xl p-3 shadow-lg">
+                        <iframe
+                          src={getImagePath(item.url)}
+                          className="w-full h-[600px] rounded-lg"
+                          title={item.caption || `PDF ${index + 1}`}
+                        />
+                      </div>
+                      {item.caption && (
+                        <p className="text-xs text-white/50 mt-1.5 italic">
+                          {item.caption}
+                        </p>
+                      )}
+                      <a
+                        href={getImagePath(item.url)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs primary-text hover:underline"
+                      >
+                        <ArrowDownTrayIcon className="w-3.5 h-3.5" />
+                        Download PDF
+                      </a>
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-white/50 text-sm">
+              No media available for this project yet.
+            </p>
           )}
         </div>
       </div>
-    </div>
+
+      {/* ── Lightbox ── */}
+      {lightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
+          className="fixed inset-0 bg-black/92 z-50 flex flex-col items-center justify-center p-4 gap-3"
+          onClick={closeLightbox}
+        >
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white/60 hover:text-white text-3xl leading-none transition-colors"
+            aria-label="Close lightbox"
+          >
+            &times;
+          </button>
+          <img
+            src={lightboxImage.src}
+            alt={lightboxImage.caption || "Enlarged view"}
+            className="max-w-full max-h-[85vh] object-contain rounded-xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+          {lightboxImage.caption && (
+            <p className="text-white/50 text-sm italic text-center">
+              {lightboxImage.caption}
+            </p>
+          )}
+        </div>
+      )}
+    </main>
   );
 }
 

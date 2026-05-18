@@ -20,50 +20,52 @@ const dedupedTechnologies = technologies.map((cat) => ({
 
 function About() {
   return (
-    <div className="min-h-screen max-w-[1100px] mx-auto py-8 pt-8 md:px-0 px-4">
+    <main id="main-content" className="min-h-screen max-w-[1100px] mx-auto py-6  md:px-0 px-4">
 
-      {/* Header */}
-      <div className="flex flex-row gap-8 items-center justify-center pb-16">
+      {/* ── Header ── */}
+      <section className="flex flex-row gap-5 items-center pb-6 md:pb-10">
         <img
           src={profilePicture}
-          alt="Profile"
-          className="rounded-full w-40"
+          alt="Eren Erisgen"
+          className="rounded-2xl w-28 h-28 md:w-32 md:h-32 object-cover object-top shrink-0"
           loading="lazy"
         />
         <div className="text-left">
-          <h1 className="md:text-7xl text-5xl font-extrabold text-light">
+          <h1 className="md:text-5xl text-3xl font-extrabold text-light tracking-tight">
             Eren Erisgen
           </h1>
-          <p className="text-lg secondary-text code-font mt-1">
-            Associate Software Engineer @ The Bernard Group
+          <p className="text-sm secondary-text code-font mt-1">
+            Software Engineer &amp;&amp; Computer Scientist
           </p>
-          <div className="flex gap-4 mt-3">
+          <div className="flex gap-3 mt-3 flex-wrap">
             <a
               href="https://github.com/Ereneri"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-light hover:text-white transition-colors text-sm hover:underline"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium transition-colors"
             >
-              <img src={githubIcon} alt="GitHub" className="w-4 h-4" />
+              <img src={githubIcon} alt="" aria-hidden="true" className="w-3.5 h-3.5" />
               GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/eren-erisgen/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-light hover:text-white transition-colors text-sm hover:underline"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium transition-colors"
             >
-              <img src={linkedinIcon} alt="LinkedIn" className="w-4 h-4" />
+              <img src={linkedinIcon} alt="" aria-hidden="true" className="w-3.5 h-3.5" />
               LinkedIn
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* About Me */}
-      <div className="flex flex-col gap-4 pb-16">
-        <h2 className="text-3xl font-bold primary-text uppercase">About Me</h2>
-        <p className="md:text-xl text-light md:text-justify text-left">
+      {/* ── About Me ── */}
+      <section className="flex flex-col gap-4 py-6 ">
+        <h2 className="text-xl font-bold primary-text uppercase tracking-tight">
+          About Me
+        </h2>
+        <p className="md:text-base text-sm text-white/80 leading-relaxed">
           As a Software Engineer, I strive daily to build software that
           meaningfully improves the lives of users. My education at the
           University of Minnesota, Twin Cities equipped me with the skills to
@@ -75,25 +77,25 @@ function About() {
           interested in cloud infrastructure, event-driven architecture, and
           AI-native development workflows.
         </p>
-      </div>
+      </section>
 
-      {/* Technologies */}
-      <div className="flex flex-col gap-4 pb-16">
-        <h2 className="text-3xl font-bold primary-text uppercase">
+      {/* ── Technologies ── */}
+      <section className="flex flex-col gap-4 md:gap-6 py-6 ">
+        <h2 className="text-xl font-bold primary-text uppercase tracking-tight">
           Technologies
         </h2>
-        <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
+        <div className="gap-6 grid-cols-1 md:grid-cols-2 grid">
           {dedupedTechnologies.map((technology, technologyIndex) => (
-            <div key={technologyIndex} className="flex flex-col gap-2">
-              <h3 className="text-xl font-semibold text-tertiary flex items-center gap-2 uppercase code-font">
+            <div
+              key={technologyIndex}
+              className="flex flex-col gap-3 rounded-xl"
+            >
+              <h3 className="text-xs font-semibold text-white/50 uppercase tracking-widest code-font">
                 {technology.category}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {technology.items.map((item, itemIndex) => (
-                  <span
-                    key={itemIndex}
-                    className="bg-primary px-4 py-2 text-sm rounded-lg text-light bg-tertiary cursor-default"
-                  >
+                  <span key={itemIndex} className="tech-tag">
                     {item}
                   </span>
                 ))}
@@ -101,100 +103,113 @@ function About() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Work Experience */}
-      <div className="flex flex-col gap-4 pb-16">
-        <h2 className="text-3xl font-bold primary-text uppercase">
+      <hr className="section-divider" />
+
+      {/* ── Work Experience ── */}
+      <section className="flex flex-col gap-4 md:gap-6 py-6">
+        <h2 className="text-xl font-bold primary-text uppercase tracking-tight">
           Work Experience
         </h2>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 md:gap-10">
           {workExperienceData.map((company, companyIndex) => (
-            <div key={companyIndex} className="flex justify-between w-full">
-              <img
-                src={companyImages[company.image]}
-                alt={`${company.company} Logo`}
-                className="w-16 h-16 mr-4 rounded-xl md:block hidden object-cover"
-                loading="lazy"
-              />
-              <div className="text-left w-full">
-                <h3 className="text-2xl font-bold text-light">
+            <div key={companyIndex} className="flex gap-4">
+              {/* Company logo */}
+              <div className="shrink-0 md:block hidden">
+                <img
+                  src={companyImages[company.image]}
+                  alt={`${company.company} logo`}
+                  className="w-12 h-12 rounded-xl object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col gap-1 w-full">
+                <h3 className="text-lg font-bold secondary-text">
                   {company.company}
                 </h3>
-                {company.positions.map((position, positionIndex) => (
-                  <div key={positionIndex} className="relative">
-                    <div className="w-full md:justify-between flex md:flex-row flex-col mt-2">
-                      <div className="flex items-center gap-4">
-                        <span className="w-2 h-2 shrink-0 bg-tertiary rounded-full relative z-10" />
-                        <h4 className="text-xl text-secondary code-font">
-                          {position.title}
-                        </h4>
-                      </div>
-                      <h4 className="md:text-xl font-base md:ml-0 ml-6 text-light/60">
-                        {position.period}
-                      </h4>
-                    </div>
-                    <div
-                      className={`pb-4 pl-4 ${
-                        positionIndex < company.positions.length - 1
-                          ? "relative"
-                          : ""
-                      }`}
-                    >
+
+                {/* Timeline rail */}
+                <div className="relative mt-3 flex flex-col">
+                  {company.positions.map((position, positionIndex) => (
+                    <div key={positionIndex} className="relative flex gap-4 pb-6 last:pb-0">
+                      {/* Dot — sits on the rail */}
+                      <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[var(--clr-primary-a0)] shrink-0 z-10" />
+                      {/* Connector line to next dot — only between positions */}
                       {positionIndex < company.positions.length - 1 && (
-                        <div
-                          className="absolute left-0 top-0 bottom-0 w-0.5 bg-tertiary mb-2"
-                          style={{ marginLeft: "3px" }}
+                        <span
+                          className="absolute left-[2.5px] top-[10px] bottom-0 w-px bg-white/15"
+                          aria-hidden="true"
                         />
                       )}
-                      <ul className="list-disc list-inside md:text-justify text-light ml-2 mt-2">
-                        {position.responsibilities.map(
-                          (responsibility, idx) => (
-                            <li key={idx} className="mb-2 leading-snug">
+
+                      {/* Position content */}
+                      <div className="flex flex-col gap-2 flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-4 flex-wrap">
+                          <h4 className="text-sm font-semibold text-white code-font leading-snug">
+                            {position.title}
+                          </h4>
+                          <span className="text-xs text-white/40 code-font shrink-0">
+                            {position.period}
+                          </span>
+                        </div>
+
+                        <ul className="flex flex-col gap-1.5 list-disc list-outside ml-4">
+                          {position.responsibilities.map((responsibility, idx) => (
+                            <li
+                              key={idx}
+                              className="text-sm text-white/70 leading-relaxed"
+                            >
                               {responsibility}
                             </li>
-                          )
-                        )}
-                      </ul>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Education */}
-      <div className="flex flex-col gap-4 pb-16">
-        <h2 className="text-3xl font-bold primary-text uppercase">Education</h2>
-        <div className="flex w-full flex-row">
+      <hr className="section-divider" />
+
+      {/* ── Education ── */}
+      <section className="flex flex-col gap-4 md:gap-6 py-6 ">
+        <h2 className="text-xl font-bold primary-text uppercase tracking-tight">
+          Education
+        </h2>
+        <div className="flex gap-4">
           <img
             src={umnSeal}
-            alt="University of Minnesota Seal"
-            className="w-16 h-16 mr-4 rounded-xl md:block hidden object-cover"
+            alt="University of Minnesota seal"
+            className="w-12 h-12 rounded-xl object-cover shrink-0 md:block hidden"
             loading="lazy"
           />
-          <div className="flex justify-between w-full md:flex-row flex-col">
+          <div className="flex justify-between w-full md:flex-row flex-col gap-1">
             <div className="text-left">
-              <h3 className="md:text-2xl font-semibold text-light text-xl">
+              <h3 className="text-base font-semibold text-white">
                 University of Minnesota, Twin Cities
               </h3>
-              <p className="text-lg tertiary-text">
+              <p className="text-sm text-white/60 mt-0.5">
                 Bachelor of Science in Computer Science
               </p>
-            </div>
-            <div className="md:text-right text-left">
-              <h3 className="text-xl font-base text-light">GPA: 3.94 / 4.0</h3>
-              <p className="text-lg tertiary-text">
+              <p className="text-xs text-white/40 mt-0.5">
                 College of Science and Engineering
               </p>
             </div>
+            <div className="md:text-right text-left mt-1 md:mt-0">
+              <p className="text-sm font-semibold primary-text">GPA: 3.94 / 4.0</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 }
 
