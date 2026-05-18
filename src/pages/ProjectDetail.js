@@ -202,6 +202,7 @@ function ProjectDetail() {
                           src={getImagePath(item.url)}
                           alt={item.caption || `Screenshot ${index + 1}`}
                           className="w-full h-auto rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-[1.02]"
+                          loading="lazy"
                           onClick={() => openLightbox(getImagePath(item.url))}
                         />
                         {item.caption && (

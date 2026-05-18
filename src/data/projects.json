@@ -2,17 +2,19 @@
   {
     "id": "caffein8",
     "updatedAt": "In Development",
+    "featured": true,
+    "currentlyBuilding": true,
     "name": "caffein8",
     "image": "caffein8.png",
-    "description": "A full-stack social platform for energy drink enthusiasts featuring barcode scanning, consumption tracking, and community-driven drink cataloging.",
-    "fullDescription": "caffein8 is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can scan barcodes to log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The MVP is a React web application architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. A native iOS app is planned following MVP completion, featuring native barcode scanning and full feature parity.",
+    "description": "A full-stack social platform for energy drink enthusiasts to discover new drinks, share what you're drinking, and keep up with new releases from your favorite brands. In development as both a React web app and a React Native mobile app.",
+    "fullDescription": "caffein8 is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The project is currently in development as both a React web application and a React Native mobile app built with Expo. Both platforms are architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. Authentication supports Sign in with Google and Sign in with Apple via Supabase Auth. Media and user-generated content is stored using Cloudflare R2 for S3-compatible object storage.",
     "technologies": [
       "React",
+      "React Native",
+      "Expo",
       "TypeScript",
       "Vite",
       "Supabase",
-      "PostgreSQL",
-      "Supabase Edge Functions",
       "Cloudflare R2",
       "MCP",
       "Kiro AI"
@@ -79,6 +81,8 @@
   {
     "id": "kafka-streams",
     "updatedAt": "April 2025",
+    "featured": true,
+    "currentlyBuilding": false,
     "name": "Kafka Streams",
     "image": "kafka.jpg",
     "description": "Stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering for large-scale real-time event processing.",
@@ -115,6 +119,8 @@
   {
     "id": "neat-flappy-bird",
     "updatedAt": "July 7th, 2024",
+    "featured": true,
+    "currentlyBuilding": false,
     "name": "NEAT Flappy Bird",
     "image": "flappybird.jpg",
     "description": "Flappy Bird clone built in Java with NeuroEvolution of Augmenting Topologies implementation from scratch with a neural network that learns to play the game.",
@@ -168,6 +174,8 @@
   {
     "id": "2048-solver",
     "updatedAt": "April 29, 2024",
+    "featured": false,
+    "currentlyBuilding": false,
     "name": "2048 Solver",
     "image": "2048.png",
     "description": "Academic paper on comparing three common search algorithms to solve the 2048 Game. The algorithms used were minimax, Expectiminimax, and Monte Carlo Tree Search.",
@@ -198,6 +206,8 @@
   {
     "id": "planetalk",
     "updatedAt": "September 24, 2023",
+    "featured": false,
+    "currentlyBuilding": false,
     "name": "PlaneTalk",
     "image": "Earth.png",
     "description": "PlaneTalk is a web app that allows you to chat with the sun or any planet in our solar system using the power of OpenAI's GPT-3.5. Built with Python Django Backend and React Frontend.",
@@ -289,6 +299,8 @@
   {
     "id": "ourtodos",
     "updatedAt": "July 11, 2022",
+    "featured": false,
+    "currentlyBuilding": false,
     "name": "OurToDos",
     "image": "otdThumb.png",
     "description": "OurToDos is a collaborative to-do list web app designed to help teams organize their tasks in shared lists. Built with a Python Django backend, JavaScript frontend, and PostgreSQL database.",
@@ -355,6 +367,8 @@
   {
     "id": "space-game",
     "updatedAt": "June 7, 2022",
+    "featured": false,
+    "currentlyBuilding": false,
     "name": "Space Game",
     "image": "gameThumb.png",
     "description": "SpaceGame is a 2D 8-bit space shooter arcade game developed in Java. Players control a spaceship, avoid asteroids, and collect resources to survive.",

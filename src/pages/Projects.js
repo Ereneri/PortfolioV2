@@ -41,12 +41,13 @@ function Projects() {
 
         <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
           {filteredProjects.length > 0 ? (
-            filteredProjects.map(({ id, name, description }) => (
+            filteredProjects.map(({ id, name, description, image }) => (
               <ProjectCard
                 key={id}
                 id={id}
                 name={name}
                 description={description}
+                image={image}
               />
             ))
           ) : (

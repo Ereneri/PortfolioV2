@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "enabled": true,
+  "name": "git commit",
+  "description": "When the agent stops, asks the user if they want to commit their changes. If yes, runs git status and git diff to understand what changed, then crafts a conventional commit message (feat/fix/docs) with 1-2 concise outcome-focused sentences.",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "run `git status` and `git diff` (or `git diff --cached` if files are staged) to understand what was changed. Based on the diff output and our conversation context, determine the appropriate conventional commit prefix: `feat` for new features, `fix` for bug fixes, or `docs` for documentation changes. Then craft a commit message with 1-2 concise sentences focused on the outcomes and impact of the changes (not just what files were touched). Present the commit message then commit with `git add -A && git commit -m \"...\"`.  "
+  }
+}
