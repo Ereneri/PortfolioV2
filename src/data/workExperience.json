@@ -4,14 +4,25 @@
     "image": "tbg.jpg",
     "positions": [
       {
-        "title": "Associate Software Engineer",
-        "period": "June 2025 - Present",
+        "title": "Software Engineer",
+        "period": "September 2026 - Present",
         "responsibilities": [
-          "Cut production workflow coordination time by 30% by building a real-time job batching platform enabling concurrent scheduling of complex multi-step jobs.",
-          "Eliminated manual SSL certificate provisioning for 12+ operators by deploying an AWS ALB-based TLS termination solution bridging cloud and on-premises infrastructure.",
-          "Engineered a centralized client portal replacing fragmented email and FTP workflows with unified file exchange, due-date tracking, and approval workflows for external clients.",
-          "Unified three disparate file sources (legacy ERP, external ERP, on-prem) into a single source-of-truth microservice with a full CRUD API and standardized event stream, eliminating manual handoffs for downstream automation teams.",
-          "Automated end-to-end developer workflows across 6+ repos using Claude Code, Kiro AI, and custom MCP integrations (Playwright, Postman), enabling autonomous PR reviews, branch management, and UI/API regression testing."
+          "Promoted to Software Engineer, leading B2B client experience initiatives and partnering with integrations and middleware teams."
+        ]
+      },
+      {
+        "title": "Associate Software Engineer",
+        "period": "June 2025 - September 2026",
+        "responsibilities": [
+          "Engineered a client project management portal to replace email communications and FTP workflows with unified file exchange, due-date tracking, and ERP integrations.",
+          "Deployed a real-time job batching platform using WebSockets Secure and Node.js, reducing planned production man-hours by 30% through concurrent scheduling of complex multi-step jobs.",
+          "Led a team of three interns through the full-stack delivery of a project from design and code reviews to cross-functional communication across HR, Media, and Data teams.",
+          "Designed and deployed an AWS ALB-based TLS termination solution bridging cloud and on-premises infrastructure, eliminating manual SSL certificate provisioning for 12+ operators.",
+          "Built a queue-based Intelligent Document Processing (IDP) pipeline for extracting contextual and financial data, rendering results live in the frontend for user approval.",
+          "Engineered a centralized client portal with React and AWS Lambda, replacing fragmented email and FTP workflows with unified file exchange, due-date tracking, and approval workflows.",
+          "Unified three disparate file sources into a single source-of-truth microservice with a full CRUD API, standardized event stream, and bi-directional integrations to eliminate manual handoffs for downstream automation teams.",
+          "Implemented an event-driven document analyzer using AWS Bedrock and document parsing workflows to extract estimate values and contextual metadata for project-level financial tracking.",
+          "Maintained a universal authorization service with JWT-based roles and site-level multi-tenancy."
         ]
       },
       {
