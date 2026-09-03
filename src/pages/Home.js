@@ -79,7 +79,7 @@ function Home() {
               >
                 University of Minnesota
               </a>{" "}
-              with a B.S. in Computer Science, currently working as an Associate
+              with a B.S. in Computer Science, currently working as a
               Software Engineer at{" "}
               <a
                 className="primary-text hover:underline transition-colors"
@@ -111,7 +111,7 @@ function Home() {
           </h2>
           <Link
             to={`/projects/${currentlyBuilding.id}`}
-            className="w-full rounded-xl bg-tertiary flex flex-row md:flex-col text-light transition-all cursor-pointer duration-200 group hover:bg-[var(--clr-hover-surface)] overflow-hidden border border-white/5 hover:border-white/10"
+            className="rounded-xl  w-full bg-tertiary flex flex-row md:flex-col text-light transition-all cursor-pointer duration-200 group hover:bg-[var(--clr-hover-surface)] overflow-hidden border border-white/5 hover:border-white/10"
           >
             {/* Thumbnail sidebar on mobile, hidden on desktop (no standalone thumb for this card) */}
             <div className="w-24 shrink-0 md:hidden overflow-hidden">
@@ -124,7 +124,7 @@ function Home() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col flex-1 p-3 md:p-6 gap-2 md:gap-4 min-w-0">
+            <div className="flex flex-col p-3 md:p-6 gap-2 md:gap-4 min-w-0">
               {/* Header row */}
               <div className="flex items-center gap-2 md:gap-3 flex-wrap">
                 <img
