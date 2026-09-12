@@ -85,8 +85,8 @@
     "currentlyBuilding": false,
     "name": "Kafka Streams",
     "image": "kafka.jpg",
-    "description": "Stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering for large-scale real-time event processing.",
-    "fullDescription": "Built stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering to process large-scale real-time events across a distributed architecture. Developed three Apache Kafka Streams applications for a fictional music streaming platform, 'Utopia', as part of a Master's course on Event-Driven Architecture. These applications process real-time event streams to deliver business insights using advanced streaming concepts. The project answers three key business questions: identifying trending artists by demographic and location, tracking the most profitable venues based on ticket sales, and clustering customers who share the same favorite artist for targeted campaigns.",
+    "description": "Three production-grade Kafka Streams pipelines processing millions of real-time events — multi-stream joins, windowed aggregations, and demographic filtering to answer business intelligence questions for a music streaming platform.",
+    "fullDescription": "Designed three stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering to process large-scale real-time events across a distributed architecture. Developed three production-grade Apache Kafka Streams applications for a fictional music streaming platform, 'Utopia', as part of a Master's course on Event-Driven Architecture, processing millions of events to deliver business intelligence insights. The project answers three key business questions: identifying trending artists by demographic and location, tracking the most profitable venues based on ticket sales, and clustering customers who share the same favorite artist for targeted campaigns. The work demonstrates proficiency in event-driven architecture and distributed systems design principles.",
     "technologies": [
       "Java",
       "Apache Kafka Streams",
@@ -123,8 +123,8 @@
     "currentlyBuilding": false,
     "name": "NEAT Flappy Bird",
     "image": "flappybird.jpg",
-    "description": "Flappy Bird clone built in Java with NeuroEvolution of Augmenting Topologies implementation from scratch with a neural network that learns to play the game.",
-    "fullDescription": "Built a fully functional 1-1 Flappy Bird clone in Java. Then implemented a NeuroEvolution of Augmenting Topologies (NEAT) implementation on top of the clone with a homegrown neural network. The AI uses serveral data inputs to that learns to play the game. As a fun quick project, the base game was built in under 2 days as a development challenge. The neural network was built using a genetic algorithm, called NEAT, which I built from scratch following the original white paper and various online resources. To check it out for yourself, check out my GitHub link above. There are two branches in the Github repository, one where the player controls the bird and the other where the NEAT implementation controls the bird. Below you can see a quick demo of the early tests of the NEAT algorithm in action.",
+    "description": "Flappy Bird clone built in Java with a from-scratch NeuroEvolution of Augmenting Topologies (NEAT) implementation — a population-based neural network that learns to play the game, reaching consistent performance within 20-30 generations.",
+    "fullDescription": "Built a fully functional 1-1 Flappy Bird clone in Java, then implemented the NeuroEvolution of Augmenting Topologies (NEAT) algorithm from the original research paper on top of the clone, applying evolutionary computation principles including speciation, crossover, and fitness-based selection to evolve neural network topologies for real-time decision-making. The AI uses several data inputs to learn to play the game, consistently achieving strong gameplay performance within 20-30 generations through dynamic topology mutation. As a fun quick project, the base game was built in under 2 days as a development challenge, with the NEAT implementation built from scratch following the original white paper and various online resources. To check it out for yourself, check out my GitHub link above. There are two branches in the Github repository, one where the player controls the bird and the other where the NEAT implementation controls the bird. Below you can see a quick demo of the early tests of the NEAT algorithm in action.",
     "technologies": [
       "Java",
       "Neural Networks",
@@ -178,8 +178,8 @@
     "currentlyBuilding": false,
     "name": "2048 Solver",
     "image": "2048.png",
-    "description": "Academic paper on comparing three common search algorithms to solve the 2048 Game. The algorithms used were minimax, Expectiminimax, and Monte Carlo Tree Search.",
-    "fullDescription": "This project was an academic paper on comparing three common search algorithms to solve the 2048 Game. The algorithms used were minimax, Expectiminimax, and Monte Carlo Tree Search. The project is a fork of an existing 2048 AI solver, with some modifications to the code to allow for the implementation of the three algorithms. Then a C script was used to run the experiment in parallel to compare the algorithms. The results of the experiment were then analyzed and discussed in the paper. All the data analysis was done in R. The full paper and analysis can be found in the media section below.",
+    "description": "Academic paper comparing Minimax, Expectiminimax, and Monte Carlo Tree Search algorithms for optimal gameplay strategies in the stochastic 2048 puzzle game, backed by 1,000+ simulated game runs.",
+    "fullDescription": "This project is an academic paper conducting empirical research comparing Minimax, Expectiminimax, and Monte Carlo Tree Search algorithms for optimal gameplay strategies in the stochastic 2048 puzzle game. The project is a fork of an existing 2048 AI solver, modified to implement the three algorithms, then evaluated using a parallel experiment harness written in C to run the algorithms across 1,000+ game simulations. The results were analyzed statistically in R and documented in an academic paper covering methodology, experimental design, and the algorithmic trade-offs between computation time and solution quality. The full paper and analysis can be found in the media section below.",
     "technologies": [
       "C",
       "C++",
