@@ -7,30 +7,42 @@
         "title": "Software Engineer",
         "period": "September 2026 - Present",
         "responsibilities": [
-          "Promoted to Software Engineer, leading B2B client experience initiatives and partnering with integrations and middleware teams."
+          "Leading B2B client-facing experience initiatives and collaborating with the internal integrations team.",
+          "Maintaining an OpenID Connect (OIDC) authorization service with JWT roles and site-level multi-tenancy."
         ]
       },
       {
         "title": "Associate Software Engineer",
         "period": "June 2025 - September 2026",
         "responsibilities": [
-          "Engineered a client project management portal to replace email communications and FTP workflows with unified file exchange, due-date tracking, and ERP integrations.",
-          "Deployed a real-time job batching platform using WebSockets Secure and Node.js, reducing planned production man-hours by 30% through concurrent scheduling of complex multi-step jobs.",
-          "Led a team of three interns through the full-stack delivery of a project from design and code reviews to cross-functional communication across HR, Media, and Data teams.",
-          "Designed and deployed an AWS ALB-based TLS termination solution bridging cloud and on-premises infrastructure, eliminating manual SSL certificate provisioning for 12+ operators.",
-          "Built a queue-based Intelligent Document Processing (IDP) pipeline for extracting contextual and financial data, rendering results live in the frontend for user approval.",
-          "Engineered a centralized client portal with React and AWS Lambda, replacing fragmented email and FTP workflows with unified file exchange, due-date tracking, and approval workflows.",
-          "Unified three disparate file sources into a single source-of-truth microservice with a full CRUD API, standardized event stream, and bi-directional integrations to eliminate manual handoffs for downstream automation teams.",
-          "Implemented an event-driven document analyzer using AWS Bedrock and document parsing workflows to extract estimate values and contextual metadata for project-level financial tracking.",
-          "Maintained a universal authorization service with JWT-based roles and site-level multi-tenancy."
+          "Deployed a full-stack client project management portal with unified file exchange via AWS S3, custom notification pipeline for onboarding and in-app events, and bi-directional integrations to our production ERP system.",
+          "Engineered a real-time job batching queue using WebSockets Secure and Node.js, reducing planned production man-hours by 30% through concurrent scheduling of complex multi-step jobs.",
+          "Led an intern group through a collaborative full-stack project with project design, code reviews, and orchestrating communications between Human Resources, Media Production, and Data Analytics teams.",
+          "Designed and deployed an AWS ALB-based Transport Layer Security (TLS) termination solution bridging cloud and on-premises infrastructure, eliminating manual Secure Sockets Layer (SSL) certificate provisioning for 12+ operators.",
+          "Built an event-driven Intelligent Document Processing (IDP) pipeline with AWS Bedrock for extracting contextual and financial data from project estimates for in-app real-time processing updates.",
+          "Unified three disparate file sources into a single source-of-truth microservice with standardized event stream, bi-directional integrations, and file deduplication and file batching to eliminate manual file management for downstream automation teams."
         ]
       },
       {
         "title": "Intern, Software Engineer",
         "period": "May 2024 - August 2024",
         "responsibilities": [
-          "Shipped a QR code generation service embedded in production work tickets, reaching 1,000+ daily invocations and eliminating printed engineering packets company-wide.",
-          "Saved 0.2-0.5% on corporate transaction fees by implementing Level 2 purchasing card data in Braintree payment requests."
+          "Developed a QR code generation microservice embedded in production work tickets, reaching 1,000+ daily invocations and eliminating printed engineering packets company-wide.",
+          "Implemented Level 2 purchasing card data integration with Braintree payment API, reducing corporate transaction fees by 0.2-0.5%."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "University of Minnesota, College of Science and Engineering",
+    "image": "umn.jpeg",
+    "positions": [
+      {
+        "title": "Undergraduate Teaching Assistant",
+        "period": "September 2024 - May 2025",
+        "responsibilities": [
+          "Led lab sections and office hours for CSCI 3081W Program Design and Development, teaching object-oriented design patterns, software architecture, and development methodologies in both C++ and Java.",
+          "Evaluated student projects, provided code feedback, and assisted in curriculum and grading development for 100+ students."
         ]
       }
     ]
@@ -41,10 +53,10 @@
     "positions": [
       {
         "title": "Intern, Java Developer",
-        "period": "May 2023 - August 2023",
+        "period": "May 2023 - September 2023",
         "responsibilities": [
-          "Reduced QA automation runtime by 80% by replacing a slow manual test process with a JavaScript web-scraping harness that executed regression suites against internal portals.",
-          "Eliminated daily manual review of 17,000+ events by building a cron job that automatically triaged and routed alerts, freeing the team for higher-priority work."
+          "Optimized QA automation pipeline by 80% through development of a JavaScript web-scraping harness for regression testing against internal portals.",
+          "Built an automated triage system processing 17,000+ daily events, routing alerts using natural language processing to reduce manual review workload."
         ]
       }
     ]
