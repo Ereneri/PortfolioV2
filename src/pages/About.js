@@ -10,6 +10,7 @@ import linkedinIcon from "../assets/linkedin.svg";
 const companyImages = {
   "tbg.jpg": tbgLogo,
   "thrivent.jpeg": thriventLogo,
+  "umn.jpeg": umnSeal,
 };
 
 // Deduplicate items within each technology category
