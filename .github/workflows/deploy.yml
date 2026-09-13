@@ -40,5 +40,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >-
           npx gh-pages -d build --cname ereneri.dev
-          -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          -u "GitHub Actions <actions@github.com>"
           -r "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
