@@ -3,10 +3,10 @@ import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import projectsList from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 
-// Collect all unique technologies across projects, sorted alphabetically
-const allTechs = [...new Set(
-  projectsList.flatMap((p) => p.technologies ?? [])
-)].sort();
+// // Collect all unique technologies across projects, sorted alphabetically
+// const allTechs = [...new Set(
+//   projectsList.flatMap((p) => p.technologies ?? [])
+// )].sort();
 
 function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
