@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { HomeIcon, CommandLineIcon, UserIcon } from "@heroicons/react/16/solid";
 import githubIcon from "../../assets/github-mark-white.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
+import VersionToggle from "../VersionToggle";
 
 export default function Footer() {
   const quickLinks = [
@@ -77,6 +78,7 @@ export default function Footer() {
           <p className="text-white/30 text-xs code-font">
             © {new Date().getFullYear()} Eren Erisgen
           </p>
+          <VersionToggle className="inline-flex items-center gap-1.5 text-white/40 hover:text-white text-xs code-font transition-colors" />
           <p className="text-white/20 text-xs code-font">
             ereneri<span className="text-white/40">.dev</span>
           </p>

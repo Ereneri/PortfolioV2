@@ -46,6 +46,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Eren Erisgen</title>
+    <!-- Redesign: apply the saved theme before first paint, and start the JetBrains Mono download early -->
+    <script>try{if(localStorage.getItem("ee-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@v2.304/fonts/webfonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

@@ -1,0 +1,177 @@
+{
+  "_comment": "Where a technology was used outside the portfolio projects. Keys match technologies.json items.",
+  "items": {
+    "AWS S3": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS ALB": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS Lambda": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS API Gateway": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS Step Functions": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS SNS": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS SQS": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS DynamoDB": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "DynamoDB": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS CloudFront": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS Route 53": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS Certificate Manager": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS CloudWatch": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS CodePipeline": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "AWS CDK": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "CDK Construct Libraries": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "Node.js": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "WebSockets": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "Braintree": [
+      "Work",
+      "The Bernard Group"
+    ],
+    "Apache Tomcat": [
+      "Work",
+      "Professional"
+    ],
+    "Maven": [
+      "Work",
+      "Professional"
+    ],
+    "RESTful APIs": [
+      "Work",
+      "Professional"
+    ],
+    "Spring": [
+      "Work",
+      "Professional"
+    ],
+    "Spring Hibernate": [
+      "Work",
+      "Professional"
+    ],
+    "Docker": [
+      "Work",
+      "Professional"
+    ],
+    "Tailwind": [
+      "Work",
+      "Professional"
+    ],
+    "Formik": [
+      "Work",
+      "Professional"
+    ],
+    "Figma": [
+      "Work",
+      "Professional"
+    ],
+    "Atlassian JIRA": [
+      "Work",
+      "Professional"
+    ],
+    "Atlassian Confluence": [
+      "Work",
+      "Professional"
+    ],
+    "JUnit": [
+      "Work",
+      "Professional"
+    ],
+    "Mockito": [
+      "Work",
+      "Professional"
+    ],
+    "Jest": [
+      "Work",
+      "Professional"
+    ],
+    "Gulp": [
+      "Work",
+      "Professional"
+    ],
+    "Claude Code": [
+      "Work",
+      "Professional"
+    ],
+    "Kiro AI": [
+      "Work",
+      "Professional"
+    ],
+    "Kiro": [
+      "Work",
+      "Professional"
+    ],
+    "MCP": [
+      "Work",
+      "Professional"
+    ],
+    "JavaScript": [
+      "Work",
+      "Thrivent Financial"
+    ],
+    "Java": [
+      "Teaching",
+      "UMN CSCI 3081W"
+    ],
+    "C/C++": [
+      "Teaching",
+      "UMN CSCI 3081W"
+    ],
+    "Gradle": [
+      "Teaching",
+      "UMN CSCI 3081W"
+    ],
+    "Express": [
+      "School",
+      "University of Minnesota"
+    ]
+  }
+}

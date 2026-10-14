@@ -6,76 +6,41 @@
     "currentlyBuilding": true,
     "name": "caffein8",
     "image": "caffein8.png",
-    "description": "A full-stack social platform for energy drink enthusiasts to discover new drinks, share what you're drinking, and keep up with new releases from your favorite brands. In development as both a React web app and a React Native mobile app.",
-    "fullDescription": "caffein8 is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Users can showcase featured drinks on their profiles and compete on friend leaderboards tracking unique drinks consumed, total caffeine intake, and consumption frequency. Built with an AI-native development workflow leveraging custom steering files, skills, and MCP integrations. The project is currently in development as both a React web application and a React Native mobile app built with Expo. Both platforms are architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. Authentication supports Sign in with Google and Sign in with Apple via Supabase Auth. Media and user-generated content is stored using Cloudflare R2 for S3-compatible object storage.",
+    "cover": {"src": "caffein8/2026/desktop-brand-profile.png", "focus": [0.5, 0.15]},
+    "description": "A full-stack social platform for energy drink enthusiasts to discover new drinks, share what you're drinking, and keep up with new releases from your favorite brands. In development as one Expo codebase for iOS, Android, and the web.",
+    "fullDescription": "caffein8 is a niche social media platform centered around energy drink consumption tracking, similar to Strava's focused approach. Users can log drinks from a comprehensive catalog, rate their experiences, and build personal drink archives. The platform features a master drink catalog with detailed product information (caffeine content, calories, regional availability), user-submitted drink additions with admin approval, and social features including follow/unfollow, activity feeds, likes, and comments. Profiles track day streaks, weekly caffeine totals, and a ranked drink shelf, and users earn badges across 48 brand and flavor collections. Unified search spans posts, drinks, brands, and users, and guests can browse the feed, catalog, brands, and profiles without an account. Built with an AI-native development workflow (Claude Code and Kiro) leveraging custom steering files, skills, and MCP integrations. The project is in development as a single React Native codebase built with Expo that ships to iOS, Android, and the web (via React Native Web, deployed to Cloudflare Pages at caffein8.io), with client state and data fetching handled by Redux Toolkit and RTK Query. It is architected on Supabase (PostgreSQL, Auth, Storage, Edge Functions) with Row Level Security for data access control. Authentication supports Sign in with Google and Sign in with Apple via Supabase Auth. Media and user-generated content is stored using Cloudflare R2 for S3-compatible object storage.",
     "technologies": [
-      "React",
       "React Native",
       "Expo",
+      "React Native Web",
       "TypeScript",
-      "Vite",
+      "Redux Toolkit",
       "Supabase",
+      "PostgreSQL",
       "Cloudflare R2",
+      "Cloudflare Pages",
+      "NativeWind",
       "MCP",
+      "Claude Code",
       "Kiro AI"
     ],
     "githubUrl": "",
-    "liveUrl": "",
+    "liveUrl": "https://caffein8.io",
     "media": [
-      {
-        "type": "image",
-        "url": "caffein8/mobile_catalog.png",
-        "caption": "Mobile Drink Catalog",
-        "width": "small"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_details.png",
-        "caption": "Mobile Drink Details",
-        "width": "small"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_view_drink.png",
-        "caption": "Mobile View Drink",
-        "width": "small"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/brand_profile.png",
-        "caption": "Brand Profile View",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_view_profile.png",
-        "caption": "Mobile View Profile",
-        "width": "medium"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/mobile_profile.png",
-        "caption": "Mobile Profile View",
-        "width": "medium"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/catalog.png",
-        "caption": "Drink Catalog",
-        "width": "medium"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/homepage.png",
-        "caption": "caffein8 Homepage Feed",
-        "width": "medium"
-      },
-      {
-        "type": "image",
-        "url": "caffein8/profile.png",
-        "caption": "User Profile with Drink Archive",
-        "width": "medium"
-      }
+      { "type": "image", "url": "caffein8/2026/desktop-home-feed.png", "width": "full", "caption": "Home Feed with Brands to Follow" },
+      { "type": "image", "url": "caffein8/2026/mobile-catalog.png", "width": "small", "caption": "Mobile Drink Catalog" },
+      { "type": "image", "url": "caffein8/2026/mobile-drink-detail.png", "width": "small", "caption": "Mobile Drink Details" },
+      { "type": "image", "url": "caffein8/2026/mobile-user-profile.png", "width": "small", "caption": "Mobile Profile with Streak Tracking" },
+      { "type": "image", "url": "caffein8/2026/desktop-catalog.png", "width": "medium", "caption": "Drink Catalog with Sort and Brand Filters" },
+      { "type": "image", "url": "caffein8/2026/desktop-catalog-quick-view.png", "width": "medium", "caption": "Drink Quick View" },
+      { "type": "image", "url": "caffein8/2026/desktop-brand-profile.png", "width": "full", "caption": "Brand Profile" },
+      { "type": "image", "url": "caffein8/2026/desktop-drink-detail.png", "width": "medium", "caption": "Drink Details with Community Rating" },
+      { "type": "image", "url": "caffein8/2026/desktop-user-profile.png", "width": "medium", "caption": "User Profile with Streaks and Weekly Caffeine" },
+      { "type": "image", "url": "caffein8/2026/mobile-brand-profile.png", "width": "small", "caption": "Mobile Brand Profile" },
+      { "type": "image", "url": "caffein8/2026/mobile-search-results.png", "width": "small", "caption": "Mobile Unified Search" },
+      { "type": "image", "url": "caffein8/2026/mobile-badges.png", "width": "small", "caption": "Mobile Achievement Badges" },
+      { "type": "image", "url": "caffein8/2026/desktop-badges-all.png", "width": "medium", "caption": "Badge Collections" },
+      { "type": "image", "url": "caffein8/2026/desktop-search-results.png", "width": "medium", "caption": "Search Across Posts, Drinks, Brands and Users" }
     ]
   },
   {
@@ -85,11 +50,13 @@
     "currentlyBuilding": false,
     "name": "Kafka Streams",
     "image": "kafka.jpg",
+    "cover": {"src": "kafka/p1.png", "focus": [0.42, 0.6], "invert": true},
     "description": "Three production-grade Kafka Streams pipelines processing millions of real-time events — multi-stream joins, windowed aggregations, and demographic filtering to answer business intelligence questions for a music streaming platform.",
     "fullDescription": "Designed three stateful Kafka Streams pipelines with multi-stream joins, windowed aggregations, and demographic filtering to process large-scale real-time events across a distributed architecture. Developed three production-grade Apache Kafka Streams applications for a fictional music streaming platform, 'Utopia', as part of a Master's course on Event-Driven Architecture, processing millions of events to deliver business intelligence insights. The project answers three key business questions: identifying trending artists by demographic and location, tracking the most profitable venues based on ticket sales, and clustering customers who share the same favorite artist for targeted campaigns. The work demonstrates proficiency in event-driven architecture and distributed systems design principles.",
     "technologies": [
       "Java",
       "Apache Kafka Streams",
+      "JUnit",
       "Event-Driven Architecture",
       "Stream Processing"
     ],
@@ -123,10 +90,12 @@
     "currentlyBuilding": false,
     "name": "NEAT Flappy Bird",
     "image": "flappybird.jpg",
+    "cover": {"src": "flappybird/aigameplay1.png", "focus": [0.5, 0.45]},
     "description": "Flappy Bird clone built in Java with a from-scratch NeuroEvolution of Augmenting Topologies (NEAT) implementation — a population-based neural network that learns to play the game, reaching consistent performance within 20-30 generations.",
-    "fullDescription": "Built a fully functional 1-1 Flappy Bird clone in Java, then implemented the NeuroEvolution of Augmenting Topologies (NEAT) algorithm from the original research paper on top of the clone, applying evolutionary computation principles including speciation, crossover, and fitness-based selection to evolve neural network topologies for real-time decision-making. The AI uses several data inputs to learn to play the game, consistently achieving strong gameplay performance within 20-30 generations through dynamic topology mutation. As a fun quick project, the base game was built in under 2 days as a development challenge, with the NEAT implementation built from scratch following the original white paper and various online resources. To check it out for yourself, check out my GitHub link above. There are two branches in the Github repository, one where the player controls the bird and the other where the NEAT implementation controls the bird. Below you can see a quick demo of the early tests of the NEAT algorithm in action.",
+    "fullDescription": "Built a fully functional 1-1 Flappy Bird clone in Java, then implemented the NeuroEvolution of Augmenting Topologies (NEAT) algorithm from the original research paper on top of the clone, applying evolutionary computation principles including crossover, mutation, and fitness-based selection to evolve neural network topologies for real-time decision-making. The AI uses several data inputs to learn to play the game, consistently achieving strong gameplay performance within 20-30 generations through dynamic topology mutation. As a fun quick project, the base game was built in under 2 days as a development challenge, with the NEAT implementation built from scratch following the original white paper and various online resources. To check it out for yourself, check out my GitHub link above. There are two branches in the Github repository, one where the player controls the bird and the other where the NEAT implementation controls the bird. Below you can see a quick demo of the early tests of the NEAT algorithm in action.",
     "technologies": [
       "Java",
+      "Java Swing",
       "Neural Networks",
       "Genetic Algorithms"
     ],
@@ -179,7 +148,7 @@
     "name": "2048 Solver",
     "image": "2048.png",
     "description": "Academic paper comparing Minimax, Expectiminimax, and Monte Carlo Tree Search algorithms for optimal gameplay strategies in the stochastic 2048 puzzle game, backed by 1,000+ simulated game runs.",
-    "fullDescription": "This project is an academic paper conducting empirical research comparing Minimax, Expectiminimax, and Monte Carlo Tree Search algorithms for optimal gameplay strategies in the stochastic 2048 puzzle game. The project is a fork of an existing 2048 AI solver, modified to implement the three algorithms, then evaluated using a parallel experiment harness written in C to run the algorithms across 1,000+ game simulations. The results were analyzed statistically in R and documented in an academic paper covering methodology, experimental design, and the algorithmic trade-offs between computation time and solution quality. The full paper and analysis can be found in the media section below.",
+    "fullDescription": "This project is an academic paper conducting empirical research comparing Minimax, Expectiminimax, and Monte Carlo Tree Search algorithms for optimal gameplay strategies in the stochastic 2048 puzzle game. The project is a fork of an existing 2048 AI solver: I modified its three algorithm implementations and wrote a parallel experiment harness in C to run them across 1,000+ game simulations. The results were analyzed statistically in R and documented in an academic paper covering methodology, experimental design, and the algorithmic trade-offs between computation time and solution quality. The full paper and analysis can be found in the media section below.",
     "technologies": [
       "C",
       "C++",
@@ -210,13 +179,15 @@
     "currentlyBuilding": false,
     "name": "PlaneTalk",
     "image": "Earth.png",
+    "cover": {"src": "planet/earth-talking.png"},
     "description": "PlaneTalk is a web app that allows you to chat with the sun or any planet in our solar system using the power of OpenAI's GPT-3.5. Built with Python Django Backend and React Frontend.",
-    "fullDescription": "PlaneTalk is a Hackathon project developed by me and Jacob Nauman. This React-based web app allows users to chat with the sun or any planet in our solar system, powered by OpenAI's GPT-3.5. Each planet is given a unique personality based on its characteristics. You can ask it anything from planet composition to the history of its discovery. Explore and learn about our solar system in a fun and engaging way, choosing from one of five education levels to get varying levels of output complexity. All artwork was handcrafted, including animated talking GIFs for each planet (see below). Our web application was built using Django as a simple backend with a React frontend. The app uses OpenAI's GPT-3.5 Turbo for large language model capabilities. TailwindCSS was used for styling. Check out the GitHub link to see the code and try it out for yourself! (Note: You will need your own OpenAI API key to use the application.)",
+    "fullDescription": "PlaneTalk is a Hackathon project developed by me and Jacob Nauman. This React-based web app allows users to chat with the sun or any planet in our solar system, powered by OpenAI's GPT-3.5. Each planet is given a unique personality based on its characteristics. You can ask it anything from planet composition to the history of its discovery. Explore and learn about our solar system in a fun and engaging way, choosing from one of five education levels to get varying levels of output complexity. All artwork was handcrafted, including animated talking GIFs for each planet (see below). Our web application was built using Django and Django REST Framework as a simple backend with a React frontend. The app uses OpenAI's GPT-3.5 Turbo for large language model capabilities. Check out the GitHub link to see the code and try it out for yourself! (Note: You will need your own OpenAI API key to use the application.)",
     "technologies": [
       "React",
-      "Django",
-      "Python",
       "JavaScript",
+      "Python",
+      "Django",
+      "Django REST Framework",
       "OpenAI API"
     ],
     "githubUrl": "https://github.com/JakeNauman/HackUIowa-2023-Project",
@@ -303,13 +274,15 @@
     "currentlyBuilding": false,
     "name": "OurToDos",
     "image": "otdThumb.png",
-    "description": "OurToDos is a collaborative to-do list web app designed to help teams organize their tasks in shared lists. Built with a Python Django backend, JavaScript frontend, and PostgreSQL database.",
+    "cover": {"src": "otd/list.png"},
+    "description": "OurToDos is a collaborative to-do list web app designed to help teams organize their tasks in shared lists. Built with a Python Django backend, JavaScript frontend, and SQLite database.",
     "fullDescription": "OurToDos is a collaborative project designed to help teams, groups, or roommates organize their to-dos. Users can create lists and add other users to create a shared list. Once added, users can add new tasks or mark tasks as complete. When a task is created, it displays who created it. When a user completes that task, it strikes out the text and displays who completed it. This system provides visibility into who has completed what and who requested tasks. Once a task is completed, it can be deleted by simply clicking the 'X' on the right-hand side of the task list. If a task is not completed yet, it can be edited by clicking on the 'pen' icon. Additionally, users can 'pin' a list by clicking the star next to it on either the 'Home' page or the 'All Lists' page. If a user has a 'pinned' list, the 'Home' page will automatically open that list. A user can 'unpin' a list by simply clicking on the yellow star on the 'All Lists' page. I plan on adding more features and releasing this build for real-world use.",
     "technologies": [
       "Python",
       "Django",
       "JavaScript",
-      "PostgreSQL"
+      "SQLite",
+      "Bootstrap"
     ],
     "githubUrl": "https://github.com/Ereneri/OurToDos",
     "liveUrl": "",
@@ -367,14 +340,16 @@
   {
     "id": "space-game",
     "updatedAt": "June 7, 2022",
-    "featured": false,
+    "featured": true,
     "currentlyBuilding": false,
     "name": "Space Game",
     "image": "gameThumb.png",
+    "cover": {"src": "SpaceGame/GamePlay.png"},
     "description": "SpaceGame is a 2D 8-bit space shooter arcade game developed in Java. Players control a spaceship, avoid asteroids, and collect resources to survive.",
     "fullDescription": "SpaceGame is a 2D 8-bit space shooter game developed completely in Java! This single-player arcade game challenges users to control a spaceship while avoiding asteroids. Players can shoot rockets to explode asteroids; however, collision causes damage. There are two main health bars: a shield, visible as a blue sphere, and the ship's hull. Once the shield is destroyed, the blue sphere disappears. To repair the spaceship, players can collect rare metals: silver, iron, and gold. These metals increase the user's score, which can be used in the in-game shop. Players can also collect powerups, such as a wrench, to increase health for free. Within the shop, players can purchase health boosts using their score ('mechanic's repair') or press 'H' as a shortcut. The game features a leaderboard, allowing users to enter 3-letter initials to store the top 5 high scores locally. Check out the GitHub link to see the code and try it out for yourself!",
     "technologies": [
       "Java",
+      "Java Swing",
       "Game Development"
     ],
     "githubUrl": "https://github.com/Ereneri/SpaceGame",

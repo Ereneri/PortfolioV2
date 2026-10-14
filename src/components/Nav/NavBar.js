@@ -7,6 +7,7 @@ import {
   HomeIcon,
   UserIcon,
 } from "@heroicons/react/16/solid";
+import VersionToggle from "../VersionToggle";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -40,6 +41,9 @@ export default function NavBar() {
         ? "primary-text bg-white/10 nav-active-bar"
         : "text-white/80 hover:text-white hover:bg-white/10",
     ].join(" ");
+
+  const versionClass =
+    "no-underline px-3 py-1.5 rounded-md transition-colors duration-150 text-sm font-medium flex items-center gap-1.5 text-white/80 hover:text-white border border-white/15 hover:border-white/40";
 
   return (
     <>
@@ -77,6 +81,9 @@ export default function NavBar() {
                   </NavLink>
                 </li>
               ))}
+              <li>
+                <VersionToggle className={versionClass} />
+              </li>
             </ul>
 
             {/* Mobile hamburger / close */}
@@ -117,6 +124,9 @@ export default function NavBar() {
                 </NavLink>
               </li>
             ))}
+            <li>
+              <VersionToggle className={versionClass} onNavigate={() => setOpen(false)} />
+            </li>
           </ul>
         </nav>
       </header>

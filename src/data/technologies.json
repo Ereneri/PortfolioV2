@@ -10,7 +10,8 @@
       "C/C++",
       "Bash",
       "SwiftUI",
-      "ASMx86"
+      "ASMx86",
+      "R"
     ]
   },
   {
@@ -25,7 +26,8 @@
       "WebSockets",
       "Apache Tomcat",
       "Maven",
-      "Gradle"
+      "Gradle",
+      "Django REST Framework"
     ]
   },
   {
@@ -37,7 +39,14 @@
       "Vite",
       "Tailwind",
       "Formik",
-      "Figma"
+      "Figma",
+      "React Native",
+      "React Native Web",
+      "Expo",
+      "Redux Toolkit",
+      "NativeWind",
+      "Bootstrap",
+      "Java Swing"
     ]
   },
   {
@@ -47,7 +56,8 @@
       "Redpanda",
       "Apache Flink",
       "pandas",
-      "TensorFlow"
+      "TensorFlow",
+      "Apache Kafka Streams"
     ]
   },
   {
@@ -68,7 +78,8 @@
       "AWS CDK",
       "AWS Certificate Manager",
       "Supabase",
-      "Cloudflare R2"
+      "Cloudflare R2",
+      "Cloudflare Pages"
     ]
   },
   {
@@ -93,7 +104,8 @@
       "VIM",
       "Unified Modeling Language",
       "Miro",
-      "Kiro"
+      "Kiro",
+      "OpenAI API"
     ]
   },
   {
@@ -102,7 +114,8 @@
       "PostgreSQL",
       "DynamoDB",
       "Supabase",
-      "Postgres"
+      "Postgres",
+      "SQLite"
     ]
   },
   {
@@ -114,7 +127,6 @@
       "Jest",
       "AWS CDK",
       "TensorFlow",
-      "pandas",
       "Formik",
       "Braintree",
       "AWS cdk",

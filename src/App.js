@@ -1,44 +1,23 @@
-import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import { useEffect } from "react";
-import NavBar from "./components/Nav/NavBar";
-import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import ProjectDetail from "./pages/ProjectDetail";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import { Suspense, lazy } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { VersionProvider, useVersion } from "./version/VersionContext";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
+// Two versions of the site share the same routes. Each is its own chunk, so visitors only
+// download the one they see. See version/VersionContext.js for how the default is chosen.
+const RedesignApp = lazy(() => import("./redesign/RedesignApp"));
+const ClassicApp = lazy(() => import("./classic/ClassicApp"));
+
+function Site() {
+  const { version } = useVersion();
+  return <Suspense fallback={null}>{version === "classic" ? <ClassicApp /> : <RedesignApp />}</Suspense>;
 }
 
-function App() {
+export default function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="App bg-primary">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectId" element={<ProjectDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </div>
+      <VersionProvider>
+        <Site />
+      </VersionProvider>
     </Router>
   );
 }
-
-export default App;
